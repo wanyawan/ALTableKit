@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name = 'ALTableKit'
-  s.version = '1.0.0'
+  s.version = '1.0.1'
   s.summary = 'A data-driven UITableView framework.'
-  s.homepage = 'https://github.com/wanyawan/IGListKit'
-  # s.documentation_url = 'https://github.com/wanyawan/IGListKit'
+  s.homepage = 'https://github.com/wanyawan/ALTableKit'
+  # s.documentation_url = 'https://github.com/wanyawan/ALTableKit'
   s.description = 'A data-driven UITableView framework for building fast and flexible lists.'
 
-  # s.license = { :type => "MIT", :file => "LICENSE" }
+  s.license = { :type => "MIT", :file => "LICENSE" }
   s.authors = { "Alex" => "duanzw@vip.qq.com" } 
   # s.social_media_url = 'https://twitter.com/'
   s.source = {

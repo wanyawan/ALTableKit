@@ -32,4 +32,4 @@ pod 'ALTableKit', '~>1.0.1'
 
 ## License
 
-`IGListKit` is [MIT-licensed](./LICENSE).
+`ALTableKit` is [MIT-licensed](./LICENSE).

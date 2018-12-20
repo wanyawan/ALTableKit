@@ -19,7 +19,11 @@ pod 'ALTableKit', '~>1.0.1'
 ```
 
 ### Carthage
+``
 
+## How to use
+
+* [如何使用ALTableKit](https://github.com/wanyawan/ALTableKit/wiki/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8ALTableKit)
 
 ## Requirements
 

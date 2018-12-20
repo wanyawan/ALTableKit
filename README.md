@@ -1,7 +1,7 @@
 # ALTableKit
 
-类似IGListKit TableView版本 增加了一些只属于TableView的功能
-
+A data-driven UITableView framework for building fast and Low coupling, Similar to the IGList CollectionView framework.
+数据驱动的UITableView框架，用于构建快速低耦合的tableview，类似IGList CollectionView框架
 
 ## Features
 

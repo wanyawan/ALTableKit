@@ -5,9 +5,14 @@
 
 ## Features
 
-* 自动根据cell 和identifier 注册cell，通过context直接重用
-* 把TableView delegate分发到不同的Section Controller
+### 
+
+* 自动根据cell 和identifier 注册cell，通过context直接重用（再也不怕忘记注册cell闪退）
+* 把TableView delegate分发到不同的Section Controller 降低代码耦合
 * 自动缓存cell 高度
+* 方便每一个section controller 进行单元测试
+
+### 
 
 ## Installation
 

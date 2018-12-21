@@ -9,7 +9,8 @@ A data-driven UITableView framework for building fast and Low coupling, Similar 
 
 * 自动根据cell 和identifier 注册cell，通过context直接重用（再也不怕忘记注册cell闪退）
 * 把TableView delegate分发到不同的Section Controller 降低代码耦合
-* 自动缓存cell 高度
+* 可以将复杂的Section Controller拆分成多个Section Provider 降低耦合 简化逻辑
+* 可以自动缓存table view cell 高度
 * 方便每一个section controller 进行单元测试
 
 ### 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA16920021CC965000DFF00B /* ALTableComplexSectionController.h in Headers */ = {isa = PBXBuildFile; fileRef = FA1691FE21CC965000DFF00B /* ALTableComplexSectionController.h */; };
+		FA16920121CC965000DFF00B /* ALTableComplexSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1691FF21CC965000DFF00B /* ALTableComplexSectionController.m */; };
+		FA16920421CC965C00DFF00B /* ALTableSectionProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = FA16920221CC965C00DFF00B /* ALTableSectionProvider.h */; };
+		FA16920521CC965C00DFF00B /* ALTableSectionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16920321CC965C00DFF00B /* ALTableSectionProvider.m */; };
 		FACFC27021CA87A8003E35C7 /* ALTableAdapter+HeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = FACFC25321CA87A7003E35C7 /* ALTableAdapter+HeightCache.h */; };
 		FACFC27121CA87A8003E35C7 /* ALTableKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FACFC25421CA87A7003E35C7 /* ALTableKit.h */; };
 		FACFC27221CA87A8003E35C7 /* ALTableSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACFC25521CA87A7003E35C7 /* ALTableSectionController.m */; };
@@ -43,6 +47,15 @@
 		FACFC2CB21CA88F7003E35C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FACFC2CA21CA88F7003E35C7 /* main.m */; };
 		FACFC2D621CA890A003E35C7 /* ALTableKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACFC2D521CA890A003E35C7 /* ALTableKitTests.m */; };
 		FACFC2D821CA890A003E35C7 /* ALTableKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACFC24821CA86EF003E35C7 /* ALTableKit.framework */; };
+		FAD3CACE21CD507500119921 /* ALTableSectionProviderInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD3CACC21CD507500119921 /* ALTableSectionProviderInternal.h */; };
+		FAD3CB0A21CD538700119921 /* ALTableHeaderFooterViewSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD3CB0821CD538700119921 /* ALTableHeaderFooterViewSource.h */; };
+		FAD65E5F21CC9E88003B6951 /* ALTableComplexSectionControllerInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD65E5D21CC9E88003B6951 /* ALTableComplexSectionControllerInternal.h */; };
+		FAD65E6321CCD15E003B6951 /* ALTableComplexSectionControllerIndexMap.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD65E6121CCD15E003B6951 /* ALTableComplexSectionControllerIndexMap.h */; };
+		FAD65E6421CCD15E003B6951 /* ALTableComplexSectionControllerIndexMap.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAD65E6221CCD15E003B6951 /* ALTableComplexSectionControllerIndexMap.mm */; };
+		FAD65E6721CCD95C003B6951 /* ALTableComplexSectionController+PrivateMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD65E6521CCD95C003B6951 /* ALTableComplexSectionController+PrivateMethods.h */; };
+		FAD65E6821CCD95C003B6951 /* ALTableComplexSectionController+PrivateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD65E6621CCD95C003B6951 /* ALTableComplexSectionController+PrivateMethods.m */; };
+		FAD65E6B21CCDB0F003B6951 /* ALTableSectionController+PrivateMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD65E6921CCDB0F003B6951 /* ALTableSectionController+PrivateMethods.h */; };
+		FAD65E6C21CCDB0F003B6951 /* ALTableSectionController+PrivateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD65E6A21CCDB0F003B6951 /* ALTableSectionController+PrivateMethods.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +69,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA1691FE21CC965000DFF00B /* ALTableComplexSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALTableComplexSectionController.h; sourceTree = "<group>"; };
+		FA1691FF21CC965000DFF00B /* ALTableComplexSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALTableComplexSectionController.m; sourceTree = "<group>"; };
+		FA16920221CC965C00DFF00B /* ALTableSectionProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALTableSectionProvider.h; sourceTree = "<group>"; };
+		FA16920321CC965C00DFF00B /* ALTableSectionProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALTableSectionProvider.m; sourceTree = "<group>"; };
 		FACFC24821CA86EF003E35C7 /* ALTableKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ALTableKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACFC24C21CA86EF003E35C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACFC25321CA87A7003E35C7 /* ALTableAdapter+HeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALTableAdapter+HeightCache.h"; sourceTree = "<group>"; };
@@ -100,6 +117,15 @@
 		FACFC2D321CA890A003E35C7 /* ALTableKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALTableKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACFC2D521CA890A003E35C7 /* ALTableKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALTableKitTests.m; sourceTree = "<group>"; };
 		FACFC2D721CA890A003E35C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD3CACC21CD507500119921 /* ALTableSectionProviderInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALTableSectionProviderInternal.h; sourceTree = "<group>"; };
+		FAD3CB0821CD538700119921 /* ALTableHeaderFooterViewSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALTableHeaderFooterViewSource.h; sourceTree = "<group>"; };
+		FAD65E5D21CC9E88003B6951 /* ALTableComplexSectionControllerInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALTableComplexSectionControllerInternal.h; sourceTree = "<group>"; };
+		FAD65E6121CCD15E003B6951 /* ALTableComplexSectionControllerIndexMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALTableComplexSectionControllerIndexMap.h; sourceTree = "<group>"; };
+		FAD65E6221CCD15E003B6951 /* ALTableComplexSectionControllerIndexMap.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ALTableComplexSectionControllerIndexMap.mm; sourceTree = "<group>"; };
+		FAD65E6521CCD95C003B6951 /* ALTableComplexSectionController+PrivateMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ALTableComplexSectionController+PrivateMethods.h"; sourceTree = "<group>"; };
+		FAD65E6621CCD95C003B6951 /* ALTableComplexSectionController+PrivateMethods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ALTableComplexSectionController+PrivateMethods.m"; sourceTree = "<group>"; };
+		FAD65E6921CCDB0F003B6951 /* ALTableSectionController+PrivateMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ALTableSectionController+PrivateMethods.h"; sourceTree = "<group>"; };
+		FAD65E6A21CCDB0F003B6951 /* ALTableSectionController+PrivateMethods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ALTableSectionController+PrivateMethods.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,8 +200,19 @@
 				FACFC26721CA87A7003E35C7 /* ALTableDisplayHandler.m */,
 				FACFC25421CA87A7003E35C7 /* ALTableKit.h */,
 				FACFC25D21CA87A7003E35C7 /* ALTableScrollDelegate.h */,
+				FAD3CB0821CD538700119921 /* ALTableHeaderFooterViewSource.h */,
 				FACFC26C21CA87A7003E35C7 /* ALTableSectionController.h */,
 				FACFC25521CA87A7003E35C7 /* ALTableSectionController.m */,
+				FAD65E6921CCDB0F003B6951 /* ALTableSectionController+PrivateMethods.h */,
+				FAD65E6A21CCDB0F003B6951 /* ALTableSectionController+PrivateMethods.m */,
+				FA16920221CC965C00DFF00B /* ALTableSectionProvider.h */,
+				FA16920321CC965C00DFF00B /* ALTableSectionProvider.m */,
+				FA1691FE21CC965000DFF00B /* ALTableComplexSectionController.h */,
+				FA1691FF21CC965000DFF00B /* ALTableComplexSectionController.m */,
+				FAD65E6521CCD95C003B6951 /* ALTableComplexSectionController+PrivateMethods.h */,
+				FAD65E6621CCD95C003B6951 /* ALTableComplexSectionController+PrivateMethods.m */,
+				FAD65E6121CCD15E003B6951 /* ALTableComplexSectionControllerIndexMap.h */,
+				FAD65E6221CCD15E003B6951 /* ALTableComplexSectionControllerIndexMap.mm */,
 				FACFC25C21CA87A7003E35C7 /* ALTableSectionMap.h */,
 				FACFC26821CA87A7003E35C7 /* ALTableSectionMap.m */,
 				FACFC24C21CA86EF003E35C7 /* Info.plist */,
@@ -188,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				FACFC26E21CA87A8003E35C7 /* ALTableSectionControllerInternal.h */,
+				FAD65E5D21CC9E88003B6951 /* ALTableComplexSectionControllerInternal.h */,
+				FAD3CACC21CD507500119921 /* ALTableSectionProviderInternal.h */,
 				FACFC26F21CA87A8003E35C7 /* ALTableAdapterInternal.h */,
 			);
 			path = ALTableKitInternal;
@@ -227,23 +266,31 @@
 			files = (
 				FACFC27621CA87A8003E35C7 /* ALTableAdapter+ALTableContext.h in Headers */,
 				FACFC28B21CA87A8003E35C7 /* ALTableAdapterInternal.h in Headers */,
+				FAD65E6321CCD15E003B6951 /* ALTableComplexSectionControllerIndexMap.h in Headers */,
+				FAD65E5F21CC9E88003B6951 /* ALTableComplexSectionControllerInternal.h in Headers */,
 				FACFC27021CA87A8003E35C7 /* ALTableAdapter+HeightCache.h in Headers */,
 				FACFC27821CA87A8003E35C7 /* ALTableDelegate.h in Headers */,
+				FAD65E6721CCD95C003B6951 /* ALTableComplexSectionController+PrivateMethods.h in Headers */,
+				FAD3CB0A21CD538700119921 /* ALTableHeaderFooterViewSource.h in Headers */,
 				FACFC28821CA87A8003E35C7 /* ALTableAdapterProxy.h in Headers */,
+				FA16920421CC965C00DFF00B /* ALTableSectionProvider.h in Headers */,
 				FACFC28921CA87A8003E35C7 /* ALTableSectionController.h in Headers */,
 				FACFC27921CA87A8003E35C7 /* ALTableSectionMap.h in Headers */,
+				FA16920021CC965000DFF00B /* ALTableComplexSectionController.h in Headers */,
 				FACFC27F21CA87A8003E35C7 /* ALTableAdapter+UITableView.h in Headers */,
 				FACFC27C21CA87A8003E35C7 /* ALTableDisplayDelegate.h in Headers */,
 				FACFC28621CA87A8003E35C7 /* ALTableAdapter.h in Headers */,
 				FACFC28A21CA87A8003E35C7 /* ALTableSectionControllerInternal.h in Headers */,
 				FACFC28321CA87A8003E35C7 /* ALTableDiffable.h in Headers */,
 				FACFC27D21CA87A8003E35C7 /* ALTableAssert.h in Headers */,
+				FAD3CACE21CD507500119921 /* ALTableSectionProviderInternal.h in Headers */,
 				FACFC27A21CA87A8003E35C7 /* ALTableScrollDelegate.h in Headers */,
 				FACFC27321CA87A8003E35C7 /* ALTableAdapterUpdater.h in Headers */,
 				FACFC28221CA87A8003E35C7 /* ALTableDataSource.h in Headers */,
 				FACFC28721CA87A8003E35C7 /* ALTableContext.h in Headers */,
 				FACFC28121CA87A8003E35C7 /* ALTableDisplayHandler.h in Headers */,
 				FACFC27121CA87A8003E35C7 /* ALTableKit.h in Headers */,
+				FAD65E6B21CCDB0F003B6951 /* ALTableSectionController+PrivateMethods.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,12 +422,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD65E6C21CCDB0F003B6951 /* ALTableSectionController+PrivateMethods.m in Sources */,
 				FACFC28521CA87A8003E35C7 /* ALTableSectionMap.m in Sources */,
+				FA16920521CC965C00DFF00B /* ALTableSectionProvider.m in Sources */,
 				FACFC27221CA87A8003E35C7 /* ALTableSectionController.m in Sources */,
+				FAD65E6821CCD95C003B6951 /* ALTableComplexSectionController+PrivateMethods.m in Sources */,
+				FA16920121CC965000DFF00B /* ALTableComplexSectionController.m in Sources */,
 				FACFC27721CA87A8003E35C7 /* ALTableAdapter.m in Sources */,
 				FACFC27B21CA87A8003E35C7 /* ALTableAdapterUpdater.m in Sources */,
 				FACFC28421CA87A8003E35C7 /* ALTableDisplayHandler.m in Sources */,
 				FACFC28021CA87A8003E35C7 /* ALTableAdapter+ALTableContext.m in Sources */,
+				FAD65E6421CCD15E003B6951 /* ALTableComplexSectionControllerIndexMap.mm in Sources */,
 				FACFC27421CA87A8003E35C7 /* ALTableAdapter+HeightCache.m in Sources */,
 				FACFC27521CA87A8003E35C7 /* ALTableAdapterProxy.m in Sources */,
 				FACFC27E21CA87A8003E35C7 /* ALTableAdapter+UITableView.m in Sources */,

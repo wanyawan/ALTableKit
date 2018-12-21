@@ -8,10 +8,11 @@
 
 #import "ALTableAdapter+UITableView.h"
 #import "ALTableSectionMap.h"
-#import "ALTableSectionController.h"
+#import "ALTableSectionControllerInternal.h"
 #import "ALTableAdapterInternal.h"
 #import "ALTableDisplayHandler.h"
 #import "ALTableAdapter+HeightCache.h"
+#import "ALTableSectionController+PrivateMethods.h"
 
 @implementation ALTableAdapter (UITableView)
 
@@ -23,7 +24,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     ALTableSectionController * sectionController = [self sectionControllerForSection:section];
-    const NSInteger numberOfItems = [sectionController numberOfRows];
+    const NSInteger numberOfItems = [sectionController al_numberOfRows];
     return numberOfItems;
 }
 
@@ -34,7 +35,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ALTableSectionController * sectionController = [self sectionControllerForSection:indexPath.section];
-    UITableViewCell *cell = [sectionController cellForRowAtIndex:indexPath.item];
+    UITableViewCell *cell = [sectionController al_cellForRowAtIndex:indexPath.item];
     [self mapView:cell toSectionController:sectionController];
     return cell;
 }
@@ -75,7 +76,7 @@
         [tableViewDelegate tableView:tableView didSelectRowAtIndexPath:indexPath];
     }
     ALTableSectionController * sectionController = [self sectionControllerForSection:indexPath.section];
-    [sectionController didSelectRowAtIndex:indexPath.row];
+    [sectionController al_didSelectRowAtIndex:indexPath.row];
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -84,7 +85,7 @@
         [tableViewDelegate tableView:tableView didDeselectRowAtIndexPath:indexPath];
     }
     ALTableSectionController * sectionController = [self sectionControllerForSection:indexPath.section];
-    [sectionController didDeselectRowAtIndex:indexPath.row];
+    [sectionController al_didDeselectRowAtIndex:indexPath.row];
 }
 
 #pragma mark - Display

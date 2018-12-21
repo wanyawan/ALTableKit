@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class ALTableSectionController;
 
+/**
+ The tableview context provides limited access to the collection-related information that
+ section controllers need for operations like calculating height, dequeuing cells.
+ tableview 上下文信息 用于计算高度 重用cell
+ */
 @protocol ALTableContext <NSObject>
 
 @property (nonatomic, readonly) CGSize containerSize;

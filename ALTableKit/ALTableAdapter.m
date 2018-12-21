@@ -14,6 +14,7 @@
 #import "ALTableAssert.h"
 #import "ALTableAdapterProxy.h"
 #import "ALTableDisplayHandler.h"
+#import "ALTableSectionController+PrivateMethods.h"
 
 static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffable>> *objects) {
     if (objects == nil) {
@@ -243,8 +244,8 @@ static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffabl
         if (object != [map objectForSection:section]) {
             [map updateObject:object];
             ALTableSectionController *sectionController= [map sectionControllerForSection:section];
-            [sectionController beforeUpdateToObject:object];
-            [sectionController didUpdateToObject:object];
+            [sectionController al_beforeUpdateToObject:object];
+            [sectionController al_didUpdateToObject:object];
         }
     }
     UITableView *tableView = self.tableView;
@@ -297,12 +298,12 @@ static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffabl
         // now that the maps have been created and contexts are assigned, we consider the section controller "fully loaded"
         for (id object in updatedObjects) {
             ALTableSectionController *sectionController= [map sectionControllerForObject:object];
-            [sectionController beforeUpdateToObject:object];
-            [sectionController didUpdateToObject:object];
+            [sectionController al_beforeUpdateToObject:object];
+            [sectionController al_didUpdateToObject:object];
         }
         NSInteger itemCount = 0;
         for (ALTableSectionController *sectionController in sectionControllers) {
-            itemCount += [sectionController numberOfRows];
+            itemCount += [sectionController al_numberOfRows];
         }
         [self _updateBackgroundViewShouldHide:itemCount > 0];
 }

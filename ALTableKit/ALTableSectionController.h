@@ -10,24 +10,9 @@
 #import "ALTableContext.h"
 #import "ALTableDisplayDelegate.h"
 #import "ALTableScrollDelegate.h"
+#import "ALTableHeaderFooterViewSource.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-@protocol ALTableHeaderFooterViewSource <NSObject>
-
-@property (nonatomic, strong, nullable, readwrite) NSNumber *sectionHeaderViewHeight;
-
-@property (nonatomic, strong, nullable, readwrite) NSNumber *sectionFooterViewHeight;
-
-- (CGFloat)heightForSectionHeaderView;
-
-- (CGFloat)heightForSectionFooterView;
-
-- (UIView *)sectionHeaderView;
-
-- (UIView *)sectionFooterView;
-
-@end
 
 /**
  The base class for section controllers used in a section. This class is intended to be subclassed.
@@ -42,6 +27,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, weak, nullable, readonly) UIViewController *viewController;
 
+/**
+ A context object for interacting with the tableview.
+ Use this property for calculating height, dequeuing cells.
+ 拥有tableview上下文信息的对象 用于计算高度 重用cell
+ */
 @property (nonatomic, weak, nullable, readonly) id<ALTableContext> tableContext;
 
 /**

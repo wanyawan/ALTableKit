@@ -9,6 +9,7 @@
 #import "ALTableAdapter+HeightCache.h"
 #import "ALTableAdapterInternal.h"
 #import "ALTableSectionControllerInternal.h"
+#import "ALTableSectionController+PrivateMethods.h"
 
 @implementation ALTableAdapter (HeightCache)
 
@@ -18,7 +19,7 @@
     if (height) {
         return height.floatValue;
     } else {
-        CGFloat cellHeight = [section heightForRowAtIndex:indexPath.row];
+        CGFloat cellHeight = [section al_heightForRowAtIndex:indexPath.row];
         [section.cellHeightMap setObject:[NSNumber numberWithFloat:cellHeight] forKey:@(indexPath.row)];
         return cellHeight;
     }

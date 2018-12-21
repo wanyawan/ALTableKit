@@ -25,8 +25,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, readwrite) BOOL isLastSection;
 
-- (void)beforeUpdateToObject:(id)object;
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -1,7 +1,8 @@
 # ALTableKit
 
 A data-driven UITableView framework for building fast and Low coupling, Similar to the IGList CollectionView framework.
-数据驱动的UITableView框架，用于构建快速低耦合的tableview，类似IGList CollectionView框架
+数据驱动的UITableView框架，用于构建快速低耦合的tableview，类似IGList CollectionView框架。
+IGList用了一段时间了确实比较好用，但是发现把tableview 全部替换成collectionview成本很高而且有些情况collectionview并不能完全替代collectionview，所以写了这个ALTableKit。
 
 ## Features
 
@@ -45,11 +46,14 @@ pod 'ALTableKit', '~>1.1.0'
 ```
 
 ### Carthage
-``
+Is coming.
 
 ## How to use
 
 * [如何使用ALTableKit](https://github.com/wanyawan/ALTableKit/wiki/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8ALTableKit)
+
+## Demo
+Is coming.
 
 ## Requirements
 

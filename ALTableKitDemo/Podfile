@@ -2,7 +2,7 @@
 platform :ios, '8.0'
 use_frameworks!
 
-target 'ALTableKitTests' do
-#  pod 'Kiwi', :inhibit_warnings => true
+target 'ALTableKitDemo' do
+   pod 'ALTableKit', '~>1.1.0'
 end
 

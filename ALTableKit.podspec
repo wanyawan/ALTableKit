@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.source_files  = "ALTableKit/**/*.{h,m}"
+  s.source_files  = "ALTableKit/**/*.{h,m,mm}"
   s.public_header_files = "ALTableKit/*.h"
   s.private_header_files = "ALTableKit/ALTableKitInternal/*.h"
 

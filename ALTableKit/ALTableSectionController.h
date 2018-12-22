@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ALTableContext.h"
-#import "ALTableDisplayDelegate.h"
-#import "ALTableScrollDelegate.h"
-#import "ALTableHeaderFooterViewSource.h"
+#import <ALTableKit/ALTableContext.h>
+#import <ALTableKit/ALTableDisplayDelegate.h>
+#import <ALTableKit/ALTableScrollDelegate.h>
+#import <ALTableKit/ALTableHeaderFooterViewSource.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

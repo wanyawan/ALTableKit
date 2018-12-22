@@ -6,10 +6,10 @@
 //  Copyright © 2018 Alex. All rights reserved.
 //
 
+#import <ALTableKit/ALTableDiffable.h>
+#import <ALTableKit/ALTableAssert.h>
 #import "ALTableSectionMap.h"
 #import "ALTableSectionControllerInternal.h"
-#import "ALTableDiffable.h"
-#import "ALTableAssert.h"
 
 @interface ALTableSectionMap ()
 

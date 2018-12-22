@@ -6,8 +6,8 @@
 //  Copyright © 2018 Alex. All rights reserved.
 //
 
+#import <ALTableKit/ALTableAssert.h>
 #import "ALTableAdapterUpdater.h"
-#import "ALTableAssert.h"
 
 @interface ALTableAdapterUpdater ()
 

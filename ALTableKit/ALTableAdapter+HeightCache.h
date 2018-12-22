@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ALTableAdapter.h"
+#import <ALTableKit/ALTableAdapter.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -6,8 +6,8 @@
 //  Copyright © 2018 Alex. All rights reserved.
 //
 
+#import <ALTableKit/ALTableAssert.h>
 #import "ALTableAdapterProxy.h"
-#import "ALTableAssert.h"
 
 static BOOL isInterceptedSelector(SEL sel) {
     return (

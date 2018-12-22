@@ -6,9 +6,8 @@
 //  Copyright © 2018 Alex. All rights reserved.
 //
 
-#import "ALTableSectionController.h"
+#import <ALTableKit/ALTableAssert.h>
 #import "ALTableSectionControllerInternal.h"
-#import "ALTableAssert.h"
 
 @implementation ALTableSectionController
 
@@ -51,38 +50,5 @@
 - (void)didSelectRowAtIndex:(NSInteger)index {}
 
 - (void)didDeselectRowAtIndex:(NSInteger)index {}
-
-#pragma mark -- Private Methods
-
-//- (void)al_beforeUpdateToObject:(id)object {
-//    if (_cellHeightMap) {
-//        [_cellHeightMap removeAllObjects];
-//    }
-//}
-//
-//- (void)al_didUpdateToObject:(id)object {
-//    [self didUpdateToObject:object];
-//}
-//
-//- (NSInteger)al_numberOfRows {
-//    return [self numberOfRows];
-//}
-//
-//- (CGFloat)al_heightForRowAtIndex:(NSInteger)index {
-//    return [self heightForRowAtIndex:index];
-//}
-//
-//- (UITableViewCell *)al_cellForRowAtIndex:(NSInteger)index {
-//    return [self al_cellForRowAtIndex:index];
-//}
-//
-//- (void)al_didSelectRowAtIndex:(NSInteger)index {
-//    [self didSelectRowAtIndex:index];
-//}
-//
-//- (void)al_didDeselectRowAtIndex:(NSInteger)index {
-//    [self al_didDeselectRowAtIndex:index];
-//}
-
 
 @end

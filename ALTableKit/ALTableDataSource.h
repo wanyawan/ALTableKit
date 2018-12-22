@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ALTableDiffable.h"
+#import <ALTableKit/ALTableDiffable.h>
 
 @class ALTableAdapter;
 @class ALTableSectionController;

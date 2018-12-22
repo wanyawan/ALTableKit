@@ -6,14 +6,14 @@
 //  Copyright © 2018 Alex. All rights reserved.
 //
 
-#import "ALTableContext.h"
-#import "ALTableAdapter.h"
-#import "ALTableDiffable.h"
-#import "ALTableHeaderFooterViewSource.h"
-#import "ALTableSectionController.h"
-#import "ALTableDelegate.h"
-#import "ALTableDataSource.h"
-#import "ALTableDisplayDelegate.h"
-#import "ALTableScrollDelegate.h"
-#import "ALTableSectionProvider.h"
-#import "ALTableComplexSectionController.h"
+#import <ALTableKit/ALTableContext.h>
+#import <ALTableKit/ALTableAdapter.h>
+#import <ALTableKit/ALTableDiffable.h>
+#import <ALTableKit/ALTableHeaderFooterViewSource.h>
+#import <ALTableKit/ALTableSectionController.h>
+#import <ALTableKit/ALTableDelegate.h>
+#import <ALTableKit/ALTableDataSource.h>
+#import <ALTableKit/ALTableDisplayDelegate.h>
+#import <ALTableKit/ALTableScrollDelegate.h>
+#import <ALTableKit/ALTableSectionProvider.h>
+#import <ALTableKit/ALTableComplexSectionController.h>

@@ -178,8 +178,11 @@
 		FACFC24A21CA86EF003E35C7 /* ALTableKit */ = {
 			isa = PBXGroup;
 			children = (
+				FACFC25421CA87A7003E35C7 /* ALTableKit.h */,
 				FACFC26921CA87A7003E35C7 /* ALTableAdapter.h */,
 				FACFC25A21CA87A7003E35C7 /* ALTableAdapter.m */,
+				FACFC25C21CA87A7003E35C7 /* ALTableSectionMap.h */,
+				FACFC26821CA87A7003E35C7 /* ALTableSectionMap.m */,
 				FACFC25921CA87A7003E35C7 /* ALTableAdapter+ALTableContext.h */,
 				FACFC26321CA87A7003E35C7 /* ALTableAdapter+ALTableContext.m */,
 				FACFC25321CA87A7003E35C7 /* ALTableAdapter+HeightCache.h */,
@@ -198,7 +201,6 @@
 				FACFC25F21CA87A7003E35C7 /* ALTableDisplayDelegate.h */,
 				FACFC26421CA87A7003E35C7 /* ALTableDisplayHandler.h */,
 				FACFC26721CA87A7003E35C7 /* ALTableDisplayHandler.m */,
-				FACFC25421CA87A7003E35C7 /* ALTableKit.h */,
 				FACFC25D21CA87A7003E35C7 /* ALTableScrollDelegate.h */,
 				FAD3CB0821CD538700119921 /* ALTableHeaderFooterViewSource.h */,
 				FACFC26C21CA87A7003E35C7 /* ALTableSectionController.h */,
@@ -213,8 +215,6 @@
 				FAD65E6621CCD95C003B6951 /* ALTableComplexSectionController+PrivateMethods.m */,
 				FAD65E6121CCD15E003B6951 /* ALTableComplexSectionControllerIndexMap.h */,
 				FAD65E6221CCD15E003B6951 /* ALTableComplexSectionControllerIndexMap.mm */,
-				FACFC25C21CA87A7003E35C7 /* ALTableSectionMap.h */,
-				FACFC26821CA87A7003E35C7 /* ALTableSectionMap.m */,
 				FACFC24C21CA86EF003E35C7 /* Info.plist */,
 				FACFC26D21CA87A8003E35C7 /* ALTableKitInternal */,
 			);

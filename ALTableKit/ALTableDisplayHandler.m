@@ -6,11 +6,11 @@
 //  Copyright © 2018 Alex. All rights reserved.
 //
 
+#import <ALTableKit/ALTableAdapter.h>
+#import <ALTableKit/ALTableSectionController.h>
+#import <ALTableKit/ALTableAssert.h>
+#import <ALTableKit/ALTableDelegate.h>
 #import "ALTableDisplayHandler.h"
-#import "ALTableSectionController.h"
-#import "ALTableAssert.h"
-#import "ALTableDelegate.h"
-#import "ALTableAdapter.h"
 
 @interface ALTableDisplayHandler ()
 

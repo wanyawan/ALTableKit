@@ -6,8 +6,8 @@
 //  Copyright © 2018 Alex. All rights reserved.
 //
 
+#import <ALTableKit/ALTableAssert.h>
 #import "ALTableSectionProviderInternal.h"
-#import "ALTableAssert.h"
 
 @implementation ALTableSectionProvider
 

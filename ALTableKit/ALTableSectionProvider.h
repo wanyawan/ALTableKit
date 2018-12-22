@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ALTableContext.h"
-#import "ALTableSectionController.h"
+#import <ALTableKit/ALTableContext.h>
+#import <ALTableKit/ALTableSectionController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -6,12 +6,10 @@
 //  Copyright © 2018 Alex. All rights reserved.
 //
 
+#import <ALTableKit/ALTableAssert.h>
 #import "ALTableAdapterInternal.h"
 #import "ALTableSectionControllerInternal.h"
-#import "ALTableContext.h"
 #import "ALTableSectionMap.h"
-#import "ALTableDataSource.h"
-#import "ALTableAssert.h"
 #import "ALTableAdapterProxy.h"
 #import "ALTableDisplayHandler.h"
 #import "ALTableSectionController+PrivateMethods.h"

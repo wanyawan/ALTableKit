@@ -7,8 +7,9 @@
 //
 
 #import "ALTableComplexSectionControllerIndexMap.h"
-#import "ALTableSectionProvider.h"
-#import "ALTableAssert.h"
+#import <ALTableKit/ALTableSectionProvider.h>
+#import <ALTableKit/ALTableAssert.h>
+
 #import <vector>
 
 typedef struct {

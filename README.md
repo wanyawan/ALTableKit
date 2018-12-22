@@ -41,7 +41,7 @@ A data-driven UITableView framework for building fast and Low coupling, Similar 
 ```
 # use_frameworks! is needed for swift projects
 use_frameworks!
-pod 'ALTableKit', '~>1.0.2'
+pod 'ALTableKit', '~>1.1.0'
 ```
 
 ### Carthage

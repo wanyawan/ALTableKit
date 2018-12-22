@@ -16,6 +16,7 @@ A data-driven UITableView framework for building fast and Low coupling, Similar 
    现在可以使用section controller将这个section 拆分成多个section provider 
    每一个section provider 单独维护 cell 的位置，如下：
 
+```
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 |      cell 0     |                 |    cell 0     |                           |
  - - - - - - - - -     provier 0     - - - - - - - -                            |
@@ -29,7 +30,7 @@ A data-driven UITableView framework for building fast and Low coupling, Similar 
  - - - - - - - - -                   - - - - - - - -                            |
 |      cell 6     |                 |    cell 2     |                           |
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+```
 
 ### 
 

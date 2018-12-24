@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CBBA66D0191CDF1D480567E /* Pods_ALTableKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA50DF0B1AA60420247EAF6 /* Pods_ALTableKitTests.framework */; };
 		FA16920021CC965000DFF00B /* ALTableComplexSectionController.h in Headers */ = {isa = PBXBuildFile; fileRef = FA1691FE21CC965000DFF00B /* ALTableComplexSectionController.h */; };
 		FA16920121CC965000DFF00B /* ALTableComplexSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1691FF21CC965000DFF00B /* ALTableComplexSectionController.m */; };
 		FA16920421CC965C00DFF00B /* ALTableSectionProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = FA16920221CC965C00DFF00B /* ALTableSectionProvider.h */; };
 		FA16920521CC965C00DFF00B /* ALTableSectionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16920321CC965C00DFF00B /* ALTableSectionProvider.m */; };
-		FA45102D21CE2AA500BC2927 /* ALTableKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45102C21CE2AA500BC2927 /* ALTableKitTests.m */; };
-		FA45102F21CE2AA500BC2927 /* ALTableKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACFC24821CA86EF003E35C7 /* ALTableKit.framework */; };
+		FABA848221D08ECB00FAA314 /* ALTableKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FABA848121D08ECB00FAA314 /* ALTableKitTests.m */; };
+		FABA848421D08ECB00FAA314 /* ALTableKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACFC24821CA86EF003E35C7 /* ALTableKit.framework */; };
 		FACFC27021CA87A8003E35C7 /* ALTableAdapter+HeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = FACFC25321CA87A7003E35C7 /* ALTableAdapter+HeightCache.h */; };
 		FACFC27121CA87A8003E35C7 /* ALTableKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FACFC25421CA87A7003E35C7 /* ALTableKit.h */; };
 		FACFC27221CA87A8003E35C7 /* ALTableSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACFC25521CA87A7003E35C7 /* ALTableSectionController.m */; };
@@ -54,7 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FA45103021CE2AA500BC2927 /* PBXContainerItemProxy */ = {
+		FABA848521D08ECB00FAA314 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FACFC23F21CA86EF003E35C7 /* Project object */;
 			proxyType = 1;
@@ -71,9 +70,9 @@
 		FA1691FF21CC965000DFF00B /* ALTableComplexSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALTableComplexSectionController.m; sourceTree = "<group>"; };
 		FA16920221CC965C00DFF00B /* ALTableSectionProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALTableSectionProvider.h; sourceTree = "<group>"; };
 		FA16920321CC965C00DFF00B /* ALTableSectionProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALTableSectionProvider.m; sourceTree = "<group>"; };
-		FA45102A21CE2AA500BC2927 /* ALTableKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALTableKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA45102C21CE2AA500BC2927 /* ALTableKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALTableKitTests.m; sourceTree = "<group>"; };
-		FA45102E21CE2AA500BC2927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABA847F21D08ECB00FAA314 /* ALTableKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALTableKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FABA848121D08ECB00FAA314 /* ALTableKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALTableKitTests.m; sourceTree = "<group>"; };
+		FABA848321D08ECB00FAA314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACFC24821CA86EF003E35C7 /* ALTableKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ALTableKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACFC24C21CA86EF003E35C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACFC25321CA87A7003E35C7 /* ALTableAdapter+HeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALTableAdapter+HeightCache.h"; sourceTree = "<group>"; };
@@ -105,17 +104,6 @@
 		FACFC26E21CA87A8003E35C7 /* ALTableSectionControllerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTableSectionControllerInternal.h; sourceTree = "<group>"; };
 		FACFC26F21CA87A8003E35C7 /* ALTableAdapterInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTableAdapterInternal.h; sourceTree = "<group>"; };
 		FACFC2B421CA88B8003E35C7 /* ALTableKitDemo copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ALTableKitDemo copy-Info.plist"; path = "/Users/alex/Documents/ALTableKit/ALTableKitDemo copy-Info.plist"; sourceTree = "<absolute>"; };
-		FACFC2BB21CA88F6003E35C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FACFC2BC21CA88F6003E35C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FACFC2BE21CA88F6003E35C7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FACFC2BF21CA88F6003E35C7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FACFC2C221CA88F6003E35C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FACFC2C421CA88F7003E35C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FACFC2C721CA88F7003E35C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FACFC2C921CA88F7003E35C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FACFC2CA21CA88F7003E35C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FACFC2D521CA890A003E35C7 /* ALTableKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALTableKitTests.m; sourceTree = "<group>"; };
-		FACFC2D721CA890A003E35C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD3CACC21CD507500119921 /* ALTableSectionProviderInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALTableSectionProviderInternal.h; sourceTree = "<group>"; };
 		FAD3CB0821CD538700119921 /* ALTableHeaderFooterViewSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALTableHeaderFooterViewSource.h; sourceTree = "<group>"; };
 		FAD65E5D21CC9E88003B6951 /* ALTableComplexSectionControllerInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALTableComplexSectionControllerInternal.h; sourceTree = "<group>"; };
@@ -128,12 +116,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FA45102721CE2AA500BC2927 /* Frameworks */ = {
+		FABA847C21D08ECB00FAA314 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA45102F21CE2AA500BC2927 /* ALTableKit.framework in Frameworks */,
-				0CBBA66D0191CDF1D480567E /* Pods_ALTableKitTests.framework in Frameworks */,
+				FABA848421D08ECB00FAA314 /* ALTableKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,11 +151,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FA45102B21CE2AA500BC2927 /* ALTableKitTests */ = {
+		FABA848021D08ECB00FAA314 /* ALTableKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA45102C21CE2AA500BC2927 /* ALTableKitTests.m */,
-				FA45102E21CE2AA500BC2927 /* Info.plist */,
+				FABA848121D08ECB00FAA314 /* ALTableKitTests.m */,
+				FABA848321D08ECB00FAA314 /* Info.plist */,
 			);
 			path = ALTableKitTests;
 			sourceTree = "<group>";
@@ -177,9 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				FACFC24A21CA86EF003E35C7 /* ALTableKit */,
-				FACFC2BA21CA88F6003E35C7 /* ALTableKitDemo */,
-				FACFC2D421CA890A003E35C7 /* ALTableKitTests */,
-				FA45102B21CE2AA500BC2927 /* ALTableKitTests */,
+				FABA848021D08ECB00FAA314 /* ALTableKitTests */,
 				FACFC24921CA86EF003E35C7 /* Products */,
 				FACFC2B421CA88B8003E35C7 /* ALTableKitDemo copy-Info.plist */,
 				40298C2737900EE1B9B78F82 /* Pods */,
@@ -191,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				FACFC24821CA86EF003E35C7 /* ALTableKit.framework */,
-				FA45102A21CE2AA500BC2927 /* ALTableKitTests.xctest */,
+				FABA847F21D08ECB00FAA314 /* ALTableKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,31 +238,6 @@
 			path = ALTableKitInternal;
 			sourceTree = "<group>";
 		};
-		FACFC2BA21CA88F6003E35C7 /* ALTableKitDemo */ = {
-			isa = PBXGroup;
-			children = (
-				FACFC2BB21CA88F6003E35C7 /* AppDelegate.h */,
-				FACFC2BC21CA88F6003E35C7 /* AppDelegate.m */,
-				FACFC2BE21CA88F6003E35C7 /* ViewController.h */,
-				FACFC2BF21CA88F6003E35C7 /* ViewController.m */,
-				FACFC2C121CA88F6003E35C7 /* Main.storyboard */,
-				FACFC2C421CA88F7003E35C7 /* Assets.xcassets */,
-				FACFC2C621CA88F7003E35C7 /* LaunchScreen.storyboard */,
-				FACFC2C921CA88F7003E35C7 /* Info.plist */,
-				FACFC2CA21CA88F7003E35C7 /* main.m */,
-			);
-			path = ALTableKitDemo;
-			sourceTree = "<group>";
-		};
-		FACFC2D421CA890A003E35C7 /* ALTableKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				FACFC2D521CA890A003E35C7 /* ALTableKitTests.m */,
-				FACFC2D721CA890A003E35C7 /* Info.plist */,
-			);
-			path = ALTableKitTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -318,23 +278,22 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		FA45102921CE2AA500BC2927 /* ALTableKitTests */ = {
+		FABA847E21D08ECB00FAA314 /* ALTableKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA45103421CE2AA500BC2927 /* Build configuration list for PBXNativeTarget "ALTableKitTests" */;
+			buildConfigurationList = FABA848721D08ECB00FAA314 /* Build configuration list for PBXNativeTarget "ALTableKitTests" */;
 			buildPhases = (
-				BA9E4247672C311241E55EE8 /* [CP] Check Pods Manifest.lock */,
-				FA45102621CE2AA500BC2927 /* Sources */,
-				FA45102721CE2AA500BC2927 /* Frameworks */,
-				FA45102821CE2AA500BC2927 /* Resources */,
+				FABA847B21D08ECB00FAA314 /* Sources */,
+				FABA847C21D08ECB00FAA314 /* Frameworks */,
+				FABA847D21D08ECB00FAA314 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FA45103121CE2AA500BC2927 /* PBXTargetDependency */,
+				FABA848621D08ECB00FAA314 /* PBXTargetDependency */,
 			);
 			name = ALTableKitTests;
 			productName = ALTableKitTests;
-			productReference = FA45102A21CE2AA500BC2927 /* ALTableKitTests.xctest */;
+			productReference = FABA847F21D08ECB00FAA314 /* ALTableKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		FACFC24721CA86EF003E35C7 /* ALTableKit */ = {
@@ -364,7 +323,7 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Alex;
 				TargetAttributes = {
-					FA45102921CE2AA500BC2927 = {
+					FABA847E21D08ECB00FAA314 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 					FACFC24721CA86EF003E35C7 = {
@@ -386,13 +345,13 @@
 			projectRoot = "";
 			targets = (
 				FACFC24721CA86EF003E35C7 /* ALTableKit */,
-				FA45102921CE2AA500BC2927 /* ALTableKitTests */,
+				FABA847E21D08ECB00FAA314 /* ALTableKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FA45102821CE2AA500BC2927 /* Resources */ = {
+		FABA847D21D08ECB00FAA314 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,37 +367,12 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BA9E4247672C311241E55EE8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ALTableKitTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		FA45102621CE2AA500BC2927 /* Sources */ = {
+		FABA847B21D08ECB00FAA314 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA45102D21CE2AA500BC2927 /* ALTableKitTests.m in Sources */,
+				FABA848221D08ECB00FAA314 /* ALTableKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,36 +400,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FA45103121CE2AA500BC2927 /* PBXTargetDependency */ = {
+		FABA848621D08ECB00FAA314 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FACFC24721CA86EF003E35C7 /* ALTableKit */;
-			targetProxy = FA45103021CE2AA500BC2927 /* PBXContainerItemProxy */;
+			targetProxy = FABA848521D08ECB00FAA314 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		FACFC2C121CA88F6003E35C7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FACFC2C221CA88F6003E35C7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FACFC2C621CA88F7003E35C7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FACFC2C721CA88F7003E35C7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		FA45103221CE2AA500BC2927 /* Debug */ = {
+		FABA848821D08ECB00FAA314 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D8BF01BA5CD0C5AED14F1D9 /* Pods-ALTableKitTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ALTableKitTests/Info.plist;
@@ -511,9 +425,8 @@
 			};
 			name = Debug;
 		};
-		FA45103321CE2AA500BC2927 /* Release */ = {
+		FABA848921D08ECB00FAA314 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D597FD3845D0FE3A93867E7 /* Pods-ALTableKitTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ALTableKitTests/Info.plist;
@@ -696,11 +609,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA45103421CE2AA500BC2927 /* Build configuration list for PBXNativeTarget "ALTableKitTests" */ = {
+		FABA848721D08ECB00FAA314 /* Build configuration list for PBXNativeTarget "ALTableKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA45103221CE2AA500BC2927 /* Debug */,
-				FA45103321CE2AA500BC2927 /* Release */,
+				FABA848821D08ECB00FAA314 /* Debug */,
+				FABA848921D08ECB00FAA314 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

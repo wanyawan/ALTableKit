@@ -23,6 +23,8 @@
 
 #pragma mark -- Public Methods
 
+- (void)didUpdateToObject:(id)object {}
+
 - (NSArray <ALTableSectionProvider *> *)updateSectionProvidersWithObject:(id)object {
     ALFailAssert(@"Complex Section controller %@ must override %s:", self, __PRETTY_FUNCTION__);
     return @[];

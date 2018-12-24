@@ -20,7 +20,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ALTableComplexSectionController : ALTableSectionController
 
 /**
- - (void)didUpdateToObject:(id)object;
+ Updates the section provider to a new object.
+ @param object The object mapped to this section provider.
+ **Calling super is not required.**
+ section controller 更新object（不需要调用super 方法)
+ */
+- (void)didUpdateToObject:(id)object;
+
+/**
  - (NSInteger)numberOfRows;
  - (CGFloat)heightForRowAtIndex:(NSInteger)index;
  - (__kindof UITableViewCell *)cellForRowAtIndex:(NSInteger)index;
@@ -29,15 +36,16 @@ NS_ASSUME_NONNULL_BEGIN
  
  In this class, these methods are useless.
  Need to use ALTableSectionProvider to achieve the above functions.
+ **Calling super is not required.**
  上面这些方法都没有用了 需要使用ALTableSectionProvider来完成上面的功能
  */
-@property (nonatomic, strong, readonly) NSArray <ALTableSectionProvider *> *sectionProviders;
+- (NSArray <ALTableSectionProvider *> *)updateSectionProvidersWithObject:(id)object;
 
 /**
- Create the section providers to a new object.
+ Return existing sectionProviders.
  通过object创建一些新的section provider
  */
-- (NSArray <ALTableSectionProvider *> *)updateSectionProvidersWithObject:(id)object;
+@property (nonatomic, strong, readonly) NSArray <ALTableSectionProvider *> *sectionProviders;
 
 @end
 

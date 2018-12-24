@@ -22,6 +22,7 @@
 #pragma mark -- Override Methods
 
 - (void)al_didUpdateToObject:(id)object {
+    [self didUpdateToObject:object];
     NSArray *sectionProviders = [self updateSectionProvidersWithObject:object];
     for (ALTableSectionProvider *sectionProvider in sectionProviders) {
         [sectionProvider didUpdateToObject:object];

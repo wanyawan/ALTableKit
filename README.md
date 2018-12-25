@@ -19,7 +19,7 @@ IGList用了一段时间了确实比较好用，但是发现把tableview 全部�
   
     现在可以使用section controller将这个section 拆分成多个section provider 
    
-    每一个section provider 单独维护 cell 的位置，如下：
+    每一个section provider 单独维护 cell的高度、个数、cell和点击事件等，如下：
 
 ```
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

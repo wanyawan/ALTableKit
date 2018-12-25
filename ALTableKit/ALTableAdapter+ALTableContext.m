@@ -10,7 +10,7 @@
 #import "ALTableAdapterInternal.h"
 
 static inline NSString *ALTableReusableViewIdentifier(Class viewClass, NSString * _Nullable nibName, NSString * _Nullable kind, NSString * _Nullable givenReuseIdentifier) {
-    return [NSString stringWithFormat:@"%@%@%@%@", kind ?: @"", nibName ?: @"", NSStringFromClass(viewClass), givenReuseIdentifier ?: @""];
+    return [NSString stringWithFormat:@"%@%@%@%@", kind ?: @"", nibName ?: @"",viewClass ? NSStringFromClass(viewClass):@"", givenReuseIdentifier ?: @""];
 }
 
 @implementation ALTableAdapter (ALTableContext)

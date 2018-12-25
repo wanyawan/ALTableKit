@@ -16,8 +16,10 @@ IGList用了一段时间了确实比较好用，但是发现把tableview 全部�
 * 可以将复杂的Complex Section Controller拆分成多个Section Provider 降低耦合 简化逻辑
 
 * * 如果 cell 1 和 cell 2 根据数据的不同可能存在或不存在。这时候就会有很多逻辑判断cell 4、5、6的位置到底在哪
-   现在可以使用section controller将这个section 拆分成多个section provider 
-   每一个section provider 单独维护 cell 的位置，如下：
+  
+    现在可以使用section controller将这个section 拆分成多个section provider 
+   
+    每一个section provider 单独维护 cell 的位置，如下：
 
 ```
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

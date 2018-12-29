@@ -4,5 +4,6 @@ use_frameworks!
 
 target 'ALTableKitDemo' do
    pod 'ALTableKit', '~>1.1.0'
+   pod 'Masonry', '1.1.0'
 end
 

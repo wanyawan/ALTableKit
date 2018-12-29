@@ -14,6 +14,14 @@
 		FACFD6E321CE287B009A9985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACFD6E221CE287B009A9985 /* Assets.xcassets */; };
 		FACFD6E621CE287B009A9985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACFD6E421CE287B009A9985 /* LaunchScreen.storyboard */; };
 		FACFD6E921CE287B009A9985 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FACFD6E821CE287B009A9985 /* main.m */; };
+		FAFDE9E621D76CCB00A2F4AD /* SimpleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFDE9E521D76CCB00A2F4AD /* SimpleModel.m */; };
+		FAFDE9E921D76D1700A2F4AD /* ComplexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFDE9E821D76D1700A2F4AD /* ComplexModel.m */; };
+		FAFDE9EC21D76E7500A2F4AD /* DemoSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFDE9EB21D76E7500A2F4AD /* DemoSectionController.m */; };
+		FAFDE9EF21D76E8C00A2F4AD /* DemoComplexSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFDE9EE21D76E8C00A2F4AD /* DemoComplexSectionController.m */; };
+		FAFDE9F221D76EA100A2F4AD /* DemoSectionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFDE9F121D76EA100A2F4AD /* DemoSectionProvider.m */; };
+		FAFDE9F621D76FA000A2F4AD /* DemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFDE9F521D76FA000A2F4AD /* DemoTableViewCell.m */; };
+		FAFDE9FA21D76FB500A2F4AD /* DemoTableViewCellWithXib.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFDE9F821D76FB500A2F4AD /* DemoTableViewCellWithXib.m */; };
+		FAFDE9FB21D76FB500A2F4AD /* DemoTableViewCellWithXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFDE9F921D76FB500A2F4AD /* DemoTableViewCellWithXib.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,21 @@
 		FACFD6E521CE287B009A9985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FACFD6E721CE287B009A9985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACFD6E821CE287B009A9985 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAFDE9E421D76CCB00A2F4AD /* SimpleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleModel.h; sourceTree = "<group>"; };
+		FAFDE9E521D76CCB00A2F4AD /* SimpleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleModel.m; sourceTree = "<group>"; };
+		FAFDE9E721D76D1700A2F4AD /* ComplexModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplexModel.h; sourceTree = "<group>"; };
+		FAFDE9E821D76D1700A2F4AD /* ComplexModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplexModel.m; sourceTree = "<group>"; };
+		FAFDE9EA21D76E7500A2F4AD /* DemoSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoSectionController.h; sourceTree = "<group>"; };
+		FAFDE9EB21D76E7500A2F4AD /* DemoSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoSectionController.m; sourceTree = "<group>"; };
+		FAFDE9ED21D76E8C00A2F4AD /* DemoComplexSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoComplexSectionController.h; sourceTree = "<group>"; };
+		FAFDE9EE21D76E8C00A2F4AD /* DemoComplexSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoComplexSectionController.m; sourceTree = "<group>"; };
+		FAFDE9F021D76EA100A2F4AD /* DemoSectionProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoSectionProvider.h; sourceTree = "<group>"; };
+		FAFDE9F121D76EA100A2F4AD /* DemoSectionProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoSectionProvider.m; sourceTree = "<group>"; };
+		FAFDE9F421D76FA000A2F4AD /* DemoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTableViewCell.h; sourceTree = "<group>"; };
+		FAFDE9F521D76FA000A2F4AD /* DemoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewCell.m; sourceTree = "<group>"; };
+		FAFDE9F721D76FB500A2F4AD /* DemoTableViewCellWithXib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTableViewCellWithXib.h; sourceTree = "<group>"; };
+		FAFDE9F821D76FB500A2F4AD /* DemoTableViewCellWithXib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewCellWithXib.m; sourceTree = "<group>"; };
+		FAFDE9F921D76FB500A2F4AD /* DemoTableViewCellWithXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewCellWithXib.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +105,9 @@
 		FACFD6D821CE287B009A9985 /* ALTableKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FAFDE9F321D76F6500A2F4AD /* View */,
+				FAFDE9E121D762FE00A2F4AD /* Model */,
+				FAFDE9E321D7631A00A2F4AD /* SectionController */,
 				FACFD6D921CE287B009A9985 /* AppDelegate.h */,
 				FACFD6DA21CE287B009A9985 /* AppDelegate.m */,
 				FACFD6DC21CE287B009A9985 /* ViewController.h */,
@@ -93,6 +119,42 @@
 				FACFD6E821CE287B009A9985 /* main.m */,
 			);
 			path = ALTableKitDemo;
+			sourceTree = "<group>";
+		};
+		FAFDE9E121D762FE00A2F4AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAFDE9E421D76CCB00A2F4AD /* SimpleModel.h */,
+				FAFDE9E521D76CCB00A2F4AD /* SimpleModel.m */,
+				FAFDE9E721D76D1700A2F4AD /* ComplexModel.h */,
+				FAFDE9E821D76D1700A2F4AD /* ComplexModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAFDE9E321D7631A00A2F4AD /* SectionController */ = {
+			isa = PBXGroup;
+			children = (
+				FAFDE9EA21D76E7500A2F4AD /* DemoSectionController.h */,
+				FAFDE9EB21D76E7500A2F4AD /* DemoSectionController.m */,
+				FAFDE9ED21D76E8C00A2F4AD /* DemoComplexSectionController.h */,
+				FAFDE9EE21D76E8C00A2F4AD /* DemoComplexSectionController.m */,
+				FAFDE9F021D76EA100A2F4AD /* DemoSectionProvider.h */,
+				FAFDE9F121D76EA100A2F4AD /* DemoSectionProvider.m */,
+			);
+			path = SectionController;
+			sourceTree = "<group>";
+		};
+		FAFDE9F321D76F6500A2F4AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAFDE9F421D76FA000A2F4AD /* DemoTableViewCell.h */,
+				FAFDE9F521D76FA000A2F4AD /* DemoTableViewCell.m */,
+				FAFDE9F721D76FB500A2F4AD /* DemoTableViewCellWithXib.h */,
+				FAFDE9F821D76FB500A2F4AD /* DemoTableViewCellWithXib.m */,
+				FAFDE9F921D76FB500A2F4AD /* DemoTableViewCellWithXib.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAFDE9FB21D76FB500A2F4AD /* DemoTableViewCellWithXib.xib in Resources */,
 				FACFD6E621CE287B009A9985 /* LaunchScreen.storyboard in Resources */,
 				FACFD6E321CE287B009A9985 /* Assets.xcassets in Resources */,
 				FACFD6E121CE287B009A9985 /* Main.storyboard in Resources */,
@@ -192,8 +255,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FACFD6DE21CE287B009A9985 /* ViewController.m in Sources */,
+				FAFDE9EF21D76E8C00A2F4AD /* DemoComplexSectionController.m in Sources */,
+				FAFDE9FA21D76FB500A2F4AD /* DemoTableViewCellWithXib.m in Sources */,
+				FAFDE9E921D76D1700A2F4AD /* ComplexModel.m in Sources */,
 				FACFD6E921CE287B009A9985 /* main.m in Sources */,
 				FACFD6DB21CE287B009A9985 /* AppDelegate.m in Sources */,
+				FAFDE9F621D76FA000A2F4AD /* DemoTableViewCell.m in Sources */,
+				FAFDE9F221D76EA100A2F4AD /* DemoSectionProvider.m in Sources */,
+				FAFDE9EC21D76E7500A2F4AD /* DemoSectionController.m in Sources */,
+				FAFDE9E621D76CCB00A2F4AD /* SimpleModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +406,8 @@
 			baseConfigurationReference = 99AF17667F6CAC9103C3A12A /* Pods-ALTableKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ALTableKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -344,6 +415,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.altablekit.demo.ALTableKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -353,7 +425,8 @@
 			baseConfigurationReference = 13C0399608A0AF2B5C31FCC4 /* Pods-ALTableKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ALTableKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -361,6 +434,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.altablekit.demo.ALTableKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

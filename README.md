@@ -56,7 +56,7 @@ Is coming.
 * [如何使用ALTableKit](https://github.com/wanyawan/ALTableKit/wiki/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8ALTableKit)
 
 ## Demo
-Is coming.
+ALTableKitDemo project.
 
 ## Requirements
 

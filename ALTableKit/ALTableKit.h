@@ -17,3 +17,4 @@
 #import <ALTableKit/ALTableScrollDelegate.h>
 #import <ALTableKit/ALTableSectionProvider.h>
 #import <ALTableKit/ALTableComplexSectionController.h>
+#import <ALTableKit/ALTableAdapterUpdater.h>

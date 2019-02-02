@@ -16,7 +16,7 @@
 		FACFC27021CA87A8003E35C7 /* ALTableAdapter+HeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = FACFC25321CA87A7003E35C7 /* ALTableAdapter+HeightCache.h */; };
 		FACFC27121CA87A8003E35C7 /* ALTableKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FACFC25421CA87A7003E35C7 /* ALTableKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FACFC27221CA87A8003E35C7 /* ALTableSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACFC25521CA87A7003E35C7 /* ALTableSectionController.m */; };
-		FACFC27321CA87A8003E35C7 /* ALTableAdapterUpdater.h in Headers */ = {isa = PBXBuildFile; fileRef = FACFC25621CA87A7003E35C7 /* ALTableAdapterUpdater.h */; };
+		FACFC27321CA87A8003E35C7 /* ALTableAdapterUpdater.h in Headers */ = {isa = PBXBuildFile; fileRef = FACFC25621CA87A7003E35C7 /* ALTableAdapterUpdater.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FACFC27421CA87A8003E35C7 /* ALTableAdapter+HeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FACFC25721CA87A7003E35C7 /* ALTableAdapter+HeightCache.m */; };
 		FACFC27521CA87A8003E35C7 /* ALTableAdapterProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = FACFC25821CA87A7003E35C7 /* ALTableAdapterProxy.m */; };
 		FACFC27621CA87A8003E35C7 /* ALTableAdapter+ALTableContext.h in Headers */ = {isa = PBXBuildFile; fileRef = FACFC25921CA87A7003E35C7 /* ALTableAdapter+ALTableContext.h */; };
@@ -245,6 +245,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACFC27321CA87A8003E35C7 /* ALTableAdapterUpdater.h in Headers */,
 				FACFC28721CA87A8003E35C7 /* ALTableContext.h in Headers */,
 				FA16920021CC965000DFF00B /* ALTableComplexSectionController.h in Headers */,
 				FA16920421CC965C00DFF00B /* ALTableSectionProvider.h in Headers */,
@@ -269,7 +270,6 @@
 				FACFC28A21CA87A8003E35C7 /* ALTableSectionControllerInternal.h in Headers */,
 				FACFC27D21CA87A8003E35C7 /* ALTableAssert.h in Headers */,
 				FAD3CACE21CD507500119921 /* ALTableSectionProviderInternal.h in Headers */,
-				FACFC27321CA87A8003E35C7 /* ALTableAdapterUpdater.h in Headers */,
 				FACFC28121CA87A8003E35C7 /* ALTableDisplayHandler.h in Headers */,
 				FAD65E6B21CCDB0F003B6951 /* ALTableSectionController+PrivateMethods.h in Headers */,
 			);

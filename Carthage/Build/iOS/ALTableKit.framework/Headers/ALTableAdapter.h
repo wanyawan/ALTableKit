@@ -10,7 +10,7 @@
 #import <ALTableKit/ALTableContext.h>
 #import <ALTableKit/ALTableDataSource.h>
 #import <ALTableKit/ALTableDelegate.h>
-#import "ALTableAdapterUpdater.h"
+#import <ALTableKit/ALTableAdapterUpdater.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

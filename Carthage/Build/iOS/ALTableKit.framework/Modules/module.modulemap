@@ -1,0 +1,6 @@
+framework module ALTableKit {
+  umbrella header "ALTableKit.h"
+
+  export *
+  module * { export * }
+}

@@ -8,6 +8,7 @@
 
 #import "ALTableAdapter+ALTableContext.h"
 #import "ALTableAdapterInternal.h"
+#import <ALTableKit/ALTableSectionController.h>
 
 static inline NSString *ALTableReusableViewIdentifier(Class viewClass, NSString * _Nullable nibName, NSString * _Nullable kind, NSString * _Nullable givenReuseIdentifier) {
     return [NSString stringWithFormat:@"%@%@%@%@", kind ?: @"", nibName ?: @"",viewClass ? NSStringFromClass(viewClass):@"", givenReuseIdentifier ?: @""];
@@ -101,6 +102,18 @@ static inline NSString *ALTableReusableViewIdentifier(Class viewClass, NSString 
                                                                               bundle:(nullable NSBundle *)bundle
                                                                 forSectionController:(ALTableSectionController *)sectionController {
     return [self dequeueReusableHeaderFooterViewWithNibName:nibName reuseIdentifier:nil bundle:bundle forSectionController:sectionController];
+}
+
+- (void)insertRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation {
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
+}
+
+- (void)deleteRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation {
+    [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:animation];
+}
+
+- (void)reloadRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation {
+    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 
 @end

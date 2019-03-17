@@ -18,9 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @protocol ALTableDelegate <NSObject>
 
-- (void)tableAdapter:(ALTableAdapter *)listAdapter willDisplayObject:(id)object atIndex:(NSInteger)index;
+- (void)tableAdapter:(ALTableAdapter *)listAdapter willDisplayObject:(id)object atIndex:(NSUInteger)index;
 
-- (void)tableAdapter:(ALTableAdapter *)listAdapter didEndDisplayingObject:(id)object atIndex:(NSInteger)index;
+- (void)tableAdapter:(ALTableAdapter *)listAdapter didEndDisplayingObject:(id)object atIndex:(NSUInteger)index;
 
 @end
 

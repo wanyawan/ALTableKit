@@ -18,13 +18,13 @@
 
 #pragma mark - Data Source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSUInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.sectionMap.objects.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSUInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSUInteger)section {
     ALTableSectionController * sectionController = [self sectionControllerForSection:section];
-    const NSInteger numberOfItems = [sectionController al_numberOfRows];
+    const NSUInteger numberOfItems = [sectionController al_numberOfRows];
     return numberOfItems;
 }
 
@@ -40,13 +40,13 @@
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSUInteger)section {
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:section];
     CGFloat height = [self heightForHeaderViewAtIndexPath:indexPath];
     return height;
 }
 
-- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSUInteger)section {
     ALTableSectionController * sectionController = [self sectionControllerForSection:section];
     if (sectionController.headerFooterViewSource) {
         return [sectionController.headerFooterViewSource sectionHeaderView];
@@ -54,13 +54,13 @@
     return nil;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSUInteger)section {
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:section];
     CGFloat height = [self heightForFooterViewAtIndexPath:indexPath];
     return height;
 }
 
-- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSUInteger)section {
     ALTableSectionController * sectionController = [self sectionControllerForSection:section];
     if (sectionController.headerFooterViewSource) {
         return [sectionController.headerFooterViewSource sectionFooterView];
@@ -111,7 +111,7 @@
 //    _isSendingWorkingRangeDisplayUpdates = NO;
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(nonnull UIView *)view forSection:(NSInteger)section {
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(nonnull UIView *)view forSection:(NSUInteger)section {
     id <UITableViewDelegate> tableViewDelegate = self.tableViewDelegate;
     if ([tableViewDelegate respondsToSelector:@selector(tableView:willDisplayHeaderView:forSection:)]) {
         [tableViewDelegate tableView:tableView willDisplayHeaderView:view forSection:section];
@@ -128,7 +128,7 @@
     [self.displayHandler willDisplayHeaderView:view forTableAdapter:self sectionController:sectionController object:object indexPath:indexPath];
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayFooterView:(nonnull UIView *)view forSection:(NSInteger)section {
+- (void)tableView:(UITableView *)tableView willDisplayFooterView:(nonnull UIView *)view forSection:(NSUInteger)section {
     id <UITableViewDelegate> tableViewDelegate = self.tableViewDelegate;
     if ([tableViewDelegate respondsToSelector:@selector(tableView:willDisplayFooterView:forSection:)]) {
         [tableViewDelegate tableView:tableView willDisplayFooterView:view forSection:section];
@@ -159,7 +159,7 @@
 
 }
 
-- (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(nonnull UIView *)view forSection:(NSInteger)section {
+- (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(nonnull UIView *)view forSection:(NSUInteger)section {
     id <UITableViewDelegate> tableViewDelegate = self.tableViewDelegate;
     if ([tableViewDelegate respondsToSelector:@selector(tableView:didEndDisplayingHeaderView:forSection:)]) {
         [tableViewDelegate tableView:tableView didEndDisplayingHeaderView:view forSection:section];
@@ -170,7 +170,7 @@
     [self removeMapForView:view];
 }
 
-- (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(nonnull UIView *)view forSection:(NSInteger)section {
+- (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(nonnull UIView *)view forSection:(NSUInteger)section {
     id <UITableViewDelegate> tableViewDelegate = self.tableViewDelegate;
     if ([tableViewDelegate respondsToSelector:@selector(tableView:didEndDisplayingFooterView:forSection:)]) {
         [tableViewDelegate tableView:tableView didEndDisplayingFooterView:view forSection:section];
@@ -240,12 +240,34 @@
 }
 
 #pragma mark - Edit
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    ALTableSectionController * sectionController = [self sectionControllerForSection:indexPath.section];
+    return [sectionController al_canEditRowAtIndex:indexPath.row];
+}
 
-// to do
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ALTableSectionController * sectionController = [self sectionControllerForSection:indexPath.section];
+    return [sectionController al_editingStyleForRowAtIndex:indexPath.row];
+}
+
+- (nullable NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ALTableSectionController * sectionController = [self sectionControllerForSection:indexPath.section];
+    return [sectionController al_titleForDeleteConfirmationButtonForRowAtIndex:indexPath.row];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    ALTableSectionController * sectionController = [self sectionControllerForSection:indexPath.section];
+    return [sectionController al_commitEditingStyle:editingStyle forRowAtIndex:indexPath.row];
+}
+
+- (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ALTableSectionController * sectionController = [self sectionControllerForSection:indexPath.section];
+    return [sectionController al_editActionsForRowAtIndex:indexPath.row];
+}
+
+// TO DO
 
 //- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath;
-
-//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;
 
 //- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
 

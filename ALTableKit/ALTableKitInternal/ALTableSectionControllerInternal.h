@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, nullable, readwrite) NSMapTable <NSNumber *,NSNumber *> *cellHeightMap;
 
-@property (nonatomic, assign, readwrite) NSInteger section;
+@property (nonatomic, assign, readwrite) NSUInteger section;
 
 @property (nonatomic, assign, readwrite) BOOL isFirstSection;
 

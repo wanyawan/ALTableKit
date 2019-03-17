@@ -131,7 +131,7 @@ static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffabl
 }
 
 - (void)_updateTableViewDelegate {
-    _tableView.delegate = self.delegateProxy ? :self;
+    _tableView.delegate = self.delegateProxy ? : self;
 }
 
 #pragma mark - List Items & Sections
@@ -159,12 +159,12 @@ static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffabl
     [_viewSectionControllerMap removeObjectForKey:view];
 }
 
-- (nullable ALTableSectionController *)sectionControllerForSection:(NSInteger)section {
+- (nullable ALTableSectionController *)sectionControllerForSection:(NSUInteger)section {
     ALAssertMainThread();
     return [self.sectionMap sectionControllerForSection:section];
 }
 
-- (NSInteger)sectionForSectionController:(ALTableSectionController *)sectionController {
+- (NSUInteger)sectionForSectionController:(ALTableSectionController *)sectionController {
     ALAssertMainThread();
     ALParameterAssert(sectionController != nil);
     return [self.sectionMap sectionForSectionController:sectionController];
@@ -179,16 +179,16 @@ static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffabl
 - (id)objectForSectionController:(ALTableSectionController *)sectionController {
     ALAssertMainThread();
     ALParameterAssert(sectionController != nil);
-    const NSInteger section = [self.sectionMap sectionForSectionController:sectionController];
+    const NSUInteger section = [self.sectionMap sectionForSectionController:sectionController];
     return [self.sectionMap objectForSection:section];
 }
 
-- (id)objectAtSection:(NSInteger)section {
+- (id)objectAtSection:(NSUInteger)section {
     ALAssertMainThread();
     return [self.sectionMap objectForSection:section];
 }
 
-- (NSInteger)sectionForObject:(id)item {
+- (NSUInteger)sectionForObject:(id)item {
     ALAssertMainThread();
     ALParameterAssert(item != nil);
     return [self.sectionMap sectionForObject:item];
@@ -278,7 +278,7 @@ static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffabl
         sectionController.viewController = self.viewController;
         
         // check if the item has changed instances or is new
-        const NSInteger oldSection = [map sectionForObject:object];
+        const NSUInteger oldSection = [map sectionForObject:object];
         if (oldSection == NSNotFound || [map objectForSection:oldSection] != object) {
             [updatedObjects addObject:object];
         }
@@ -299,7 +299,7 @@ static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffabl
             [sectionController al_beforeUpdateToObject:object];
             [sectionController al_didUpdateToObject:object];
         }
-        NSInteger itemCount = 0;
+        NSUInteger itemCount = 0;
         for (ALTableSectionController *sectionController in sectionControllers) {
             itemCount += [sectionController al_numberOfRows];
         }

@@ -7,14 +7,14 @@
 //
 
 #import "ALTableComplexSectionControllerIndexMap.h"
-#import <ALTableKit/ALTableSectionProvider.h>
+#import "ALTableSectionProviderInternal.h"
 #import <ALTableKit/ALTableAssert.h>
 
 #import <vector>
 
 typedef struct {
-    NSInteger sectionProviderIndex;
-    NSInteger relativeIndex;
+    NSUInteger sectionProviderIndex;
+    NSUInteger relativeIndex;
 } ALTableSectionProviderIndex;
 
 @implementation ALTableComplexSectionControllerIndexMap
@@ -24,12 +24,14 @@ typedef struct {
 
 - (void)updateIndexMapWithSectionProviders:(NSArray<ALTableSectionProvider *> *)sectionProviders {
     _indexVector.clear();
-    NSInteger totalCount = 0;
-    for (NSInteger sectionProviderIndex = 0; sectionProviderIndex < sectionProviders.count; sectionProviderIndex++) {
+    NSUInteger totalCount = 0;
+    for (NSUInteger sectionProviderIndex = 0; sectionProviderIndex < sectionProviders.count; sectionProviderIndex++) {
         ALTableSectionProvider *sectionProvider = [sectionProviders objectAtIndex:sectionProviderIndex];
-        NSInteger count = [sectionProvider numberOfRows];
+        sectionProvider.sectionProviderIndex = sectionProviderIndex;
+        sectionProvider.firstCellAbsoluteIndex = totalCount;
+        NSUInteger count = [sectionProvider numberOfRows];
         totalCount += count;
-        for (NSInteger relativeIndex = 0; relativeIndex < count; relativeIndex++) {
+        for (NSUInteger relativeIndex = 0; relativeIndex < count; relativeIndex++) {
             ALTableSectionProviderIndex *index = (ALTableSectionProviderIndex*)malloc(sizeof(ALTableSectionProviderIndex));
             index->sectionProviderIndex = sectionProviderIndex;
             index->relativeIndex = relativeIndex;
@@ -39,15 +41,14 @@ typedef struct {
     ALParameterAssert(totalCount == _indexVector.size());
 }
 
-- (NSInteger)sectionProviderAbsoluteIndexWithAbsoluteIndex:(NSInteger)index {
+- (NSUInteger)sectionProviderAbsoluteIndexWithAbsoluteIndex:(NSUInteger)index {
     ALParameterAssert(index < _indexVector.size());
     return _indexVector[index].sectionProviderIndex;;
 }
 
-- (NSInteger)sectionProviderRelativeIndexWithAbsoluteIndex:(NSInteger)index {
+- (NSUInteger)sectionProviderRelativeIndexWithAbsoluteIndex:(NSUInteger)index {
     ALParameterAssert(index < _indexVector.size());
     return _indexVector[index].relativeIndex;;
 }
-
 
 @end

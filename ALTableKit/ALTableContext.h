@@ -57,6 +57,11 @@ NS_ASSUME_NONNULL_BEGIN
                                                                               bundle:(nullable NSBundle *)bundle
                                                                 forSectionController:(ALTableSectionController *)sectionController;
 
+- (void)insertRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation;
+
+- (void)deleteRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation;
+
+- (void)reloadRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation;
 
 @end
 

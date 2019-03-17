@@ -11,6 +11,7 @@
 #import <ALTableKit/ALTableDisplayDelegate.h>
 #import <ALTableKit/ALTableScrollDelegate.h>
 #import <ALTableKit/ALTableHeaderFooterViewSource.h>
+#import <ALTableKit/ALTableSectionEdit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  The base class for section controllers used in a section. This class is intended to be subclassed.
  ALTableSectionController 每一个section都要使用 需要继承这个类
  */
-@interface ALTableSectionController : NSObject
+@interface ALTableSectionController : NSObject <ALTableSectionEdit>
 
 /**
  The view controller housing the adapter that created this section controller.
@@ -65,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
  Returns the section within the table for this section controller.
  返回当前section controller 所在的section
  */
-@property (nonatomic, assign, readonly) NSInteger section;
+@property (nonatomic, assign, readonly) NSUInteger section;
 
 /**
  Returns `YES` if the section controller is the first section in the table, `NO` otherwise.
@@ -91,13 +92,13 @@ NS_ASSUME_NONNULL_BEGIN
  Return the number of row in the section.
  返回当前section，rows的数量
  */
-- (NSInteger)numberOfRows;
+- (NSUInteger)numberOfRows;
 
 /**
  Returns the height for the row at index.
  返回 index cell的高度
  */
-- (CGFloat)heightForRowAtIndex:(NSInteger)index;
+- (CGFloat)heightForRowAtIndex:(NSUInteger)index;
 
 /**
  Return a dequeued cell for a given index.
@@ -105,27 +106,32 @@ NS_ASSUME_NONNULL_BEGIN
  **You must override this method without calling super.**
  返回 cell（必须重写这个方法）
  */
-- (__kindof UITableViewCell *)cellForRowAtIndex:(NSInteger)index;
+- (__kindof UITableViewCell *)cellForRowAtIndex:(NSUInteger)index;
 
 /**
  Tells the section controller that the cell at the specified index path was selected.
  **Calling super is not required.**
  选中第index个 cell 调用(不需要调用super 方法)
  */
-- (void)didSelectRowAtIndex:(NSInteger)index;
+- (void)didSelectRowAtIndex:(NSUInteger)index;
 
 /**
  Tells the section controller that the cell at the specified index path was deselected.
  **Calling super is not required.**
  取消选中第index个 cell 调用(不需要调用super 方法)
  */
-- (void)didDeselectRowAtIndex:(NSInteger)index;
+- (void)didDeselectRowAtIndex:(NSUInteger)index;
+
+- (BOOL)canEditRowAtIndex:(NSUInteger)index;
+- (UITableViewCellEditingStyle)editingStyleForRowAtIndex:(NSUInteger)index;
+- (nullable NSString *)titleForDeleteConfirmationButtonForRowAtIndex:(NSUInteger)index;
+- (void)commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndex:(NSUInteger)index;
+
+- (nullable NSArray<UITableViewRowAction *> *)editActionsForRowAtIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_0);
 
 // TO DO
 //- (void)didHighlightItemAtIndex:(NSInteger)index;
-//
 //- (void)didUnhighlightItemAtIndex:(NSInteger)index;
-//
 //- (BOOL)canMoveItemAtIndex:(NSInteger)index;
 
 @end

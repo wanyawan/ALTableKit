@@ -28,12 +28,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didUpdateToObject:(id)object;
 
 /**
- - (NSInteger)numberOfRows;
- - (CGFloat)heightForRowAtIndex:(NSInteger)index;
- - (__kindof UITableViewCell *)cellForRowAtIndex:(NSInteger)index;
- - (void)didSelectRowAtIndex:(NSInteger)index;
- - (void)didDeselectRowAtIndex:(NSInteger)index;
- 
+ - (NSUInteger)numberOfRows;
+ - (CGFloat)heightForRowAtIndex:(NSUInteger)index;
+ - (__kindof UITableViewCell *)cellForRowAtIndex:(NSUInteger)index;
+ - (void)didSelectRowAtIndex:(NSUInteger)index;
+ - (void)didDeselectRowAtIndex:(NSUInteger)index;
+ - (BOOL)canEditRowAtIndex:(NSUInteger)index;
+ - (UITableViewCellEditingStyle)editingStyleForRowAtIndex:(NSUInteger)index;
+ - (nullable NSString *)titleForDeleteConfirmationButtonForRowAtIndex:(NSUInteger)index;
+ - (void)commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndex:(NSUInteger)index;
+ - (nullable NSArray<UITableViewRowAction *> *)editActionsForRowAtIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_0);
  In this class, these methods are useless.
  Need to use ALTableSectionProvider to achieve the above functions.
  **Calling super is not required.**

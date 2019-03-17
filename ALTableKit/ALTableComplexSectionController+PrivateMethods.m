@@ -9,17 +9,25 @@
 #import "ALTableComplexSectionController+PrivateMethods.h"
 #import "ALTableComplexSectionControllerInternal.h"
 #import "ALTableSectionProviderInternal.h"
+#import "ALTableSectionControllerInternal.h"
 
 @implementation ALTableComplexSectionController (PrivateMethods)
 
 #pragma mark -- Private Methods
 
-- (ALTableSectionProvider *)al_sectionProviderWithAbsoluteIndex:(NSInteger)index {
-    NSInteger absoluteIndex = [self.indexMap sectionProviderAbsoluteIndexWithAbsoluteIndex:index];
+- (ALTableSectionProvider *)al_sectionProviderWithAbsoluteIndex:(NSUInteger)index {
+    NSUInteger absoluteIndex = [self.indexMap sectionProviderAbsoluteIndexWithAbsoluteIndex:index];
     return [self.sectionProviders objectAtIndex:absoluteIndex];
 }
 
 #pragma mark -- Override Methods
+
+- (void)al_beforeUpdateToObject:(id)object {
+    if (self.cellHeightMap) {
+        [self.cellHeightMap removeAllObjects];
+        self.totalOfRows = nil;
+    }
+}
 
 - (void)al_didUpdateToObject:(id)object {
     [self didUpdateToObject:object];
@@ -33,35 +41,69 @@
     self.sectionProviders = [sectionProviders copy];
 }
 
-- (NSInteger)al_numberOfRows {
-    NSInteger count = 0;
+- (NSUInteger)al_numberOfRows {
+    if (self.totalOfRows) {
+        return [self.totalOfRows unsignedIntegerValue];
+    }
+    NSUInteger count = 0;
     for (ALTableSectionProvider *sectionProvider in self.sectionProviders) {
         count += [sectionProvider numberOfRows];
     }
+    self.totalOfRows = [NSNumber numberWithUnsignedInteger:count];
     return count;
 }
 
-- (CGFloat)al_heightForRowAtIndex:(NSInteger)index {
-    NSInteger sectionProviderIndex = [self.indexMap sectionProviderRelativeIndexWithAbsoluteIndex:index];
+- (CGFloat)al_heightForRowAtIndex:(NSUInteger)index {
+    NSUInteger sectionProviderIndex = [self.indexMap sectionProviderRelativeIndexWithAbsoluteIndex:index];
     ALTableSectionProvider *sectionProvider = [self al_sectionProviderWithAbsoluteIndex:index];
     return [sectionProvider heightForRowAtIndex:sectionProviderIndex];
 }
 
-- (UITableViewCell *)al_cellForRowAtIndex:(NSInteger)index {
-    NSInteger sectionProviderIndex = [self.indexMap sectionProviderRelativeIndexWithAbsoluteIndex:index];
+- (UITableViewCell *)al_cellForRowAtIndex:(NSUInteger)index {
+    NSUInteger sectionProviderIndex = [self.indexMap sectionProviderRelativeIndexWithAbsoluteIndex:index];
     ALTableSectionProvider *sectionProvider = [self al_sectionProviderWithAbsoluteIndex:index];
     return [sectionProvider cellForRowAtIndex:sectionProviderIndex];}
 
-- (void)al_didSelectRowAtIndex:(NSInteger)index {
-    NSInteger sectionProviderIndex = [self.indexMap sectionProviderRelativeIndexWithAbsoluteIndex:index];
+- (void)al_didSelectRowAtIndex:(NSUInteger)index {
+    NSUInteger sectionProviderIndex = [self.indexMap sectionProviderRelativeIndexWithAbsoluteIndex:index];
     ALTableSectionProvider *sectionProvider = [self al_sectionProviderWithAbsoluteIndex:index];
     [sectionProvider didSelectRowAtIndex:sectionProviderIndex];
 }
 
-- (void)al_didDeselectRowAtIndex:(NSInteger)index {
-    NSInteger sectionProviderIndex = [self.indexMap sectionProviderRelativeIndexWithAbsoluteIndex:index];
+- (void)al_didDeselectRowAtIndex:(NSUInteger)index {
+    NSUInteger sectionProviderIndex = [self.indexMap sectionProviderRelativeIndexWithAbsoluteIndex:index];
     ALTableSectionProvider *sectionProvider = [self al_sectionProviderWithAbsoluteIndex:index];
     [sectionProvider didDeselectRowAtIndex:sectionProviderIndex];
+}
+
+- (BOOL)al_canEditRowAtIndex:(NSUInteger)index {
+    NSUInteger sectionProviderIndex = [self.indexMap sectionProviderRelativeIndexWithAbsoluteIndex:index];
+    ALTableSectionProvider *sectionProvider = [self al_sectionProviderWithAbsoluteIndex:index];
+    return [sectionProvider canEditRowAtIndex:sectionProviderIndex];
+}
+
+- (UITableViewCellEditingStyle)al_editingStyleForRowAtIndex:(NSUInteger)index {
+    NSUInteger sectionProviderIndex = [self.indexMap sectionProviderRelativeIndexWithAbsoluteIndex:index];
+    ALTableSectionProvider *sectionProvider = [self al_sectionProviderWithAbsoluteIndex:index];
+    return [sectionProvider editingStyleForRowAtIndex:sectionProviderIndex];
+}
+
+- (nullable NSString *)al_titleForDeleteConfirmationButtonForRowAtIndex:(NSUInteger)index {
+    NSUInteger sectionProviderIndex = [self.indexMap sectionProviderRelativeIndexWithAbsoluteIndex:index];
+    ALTableSectionProvider *sectionProvider = [self al_sectionProviderWithAbsoluteIndex:index];
+    return [sectionProvider titleForDeleteConfirmationButtonForRowAtIndex:sectionProviderIndex];
+}
+
+- (void)al_commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndex:(NSUInteger)index {
+    ALTableSectionProvider *sectionProvider = [self al_sectionProviderWithAbsoluteIndex:index];
+    NSUInteger sectionProviderIndex = [self.indexMap sectionProviderRelativeIndexWithAbsoluteIndex:index];
+    return [sectionProvider commitEditingStyle:editingStyle forRowAtIndex:sectionProviderIndex];
+}
+
+- (nullable NSArray<UITableViewRowAction *> *)al_editActionsForRowAtIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_0) {
+    NSUInteger sectionProviderIndex = [self.indexMap sectionProviderRelativeIndexWithAbsoluteIndex:index];
+    ALTableSectionProvider *sectionProvider = [self al_sectionProviderWithAbsoluteIndex:index];
+    return [sectionProvider editActionsForRowAtIndex:sectionProviderIndex];
 }
 
 @end

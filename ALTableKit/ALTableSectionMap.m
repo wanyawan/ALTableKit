@@ -45,7 +45,7 @@
     return [self.objectToSectionControllerMap objectForKey:object];
 }
 
-- (nullable ALTableSectionController *)sectionControllerForSection:(NSInteger)section {
+- (nullable ALTableSectionController *)sectionControllerForSection:(NSUInteger)section {
     return [self.objectToSectionControllerMap objectForKey:[self objectForSection:section]];
 }
 
@@ -63,7 +63,7 @@
     }
 }
 
-- (nullable id)objectForSection:(NSInteger)section {
+- (nullable id)objectForSection:(NSUInteger)section {
     NSArray *objects = self.mObjects;
     if (section < objects.count) {
         return objects[section];
@@ -91,7 +91,7 @@
         
         sectionController.isFirstSection = (object == firstObject);
         sectionController.isLastSection = (object == lastObject);
-        sectionController.section = (NSInteger)idx;
+        sectionController.section = idx;
     }];
 }
 
@@ -119,7 +119,7 @@
     
     BOOL stop = NO;
     NSArray *objects = self.objects;
-    for (NSInteger section = 0; section < objects.count; section++) {
+    for (NSUInteger section = 0; section < objects.count; section++) {
         id object = objects[section];
         ALTableSectionController *sectionController = [self sectionControllerForObject:object];
         block(object, sectionController, section, &stop);

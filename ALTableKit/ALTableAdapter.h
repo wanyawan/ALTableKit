@@ -91,14 +91,14 @@ NS_ASSUME_NONNULL_BEGIN
  Query the section controller at a given section index. Constant time lookup.
  返回section 位置的section controller
  */
-- (nullable ALTableSectionController *)sectionControllerForSection:(NSInteger)section;
+- (nullable ALTableSectionController *)sectionControllerForSection:(NSUInteger)section;
 
 /**
  Query the section index of a section controller. Constant time lookup.
  @return The section index of the list if it exists, otherwise `NSNotFound`.
  返回section controller的位置 如果没找到返回 NSNotFound
  */
-- (NSInteger)sectionForSectionController:(ALTableSectionController *)sectionController;
+- (NSUInteger)sectionForSectionController:(ALTableSectionController *)sectionController;
 
 /**
  Fetch a section controller given an object. Can return nil.
@@ -118,14 +118,14 @@ NS_ASSUME_NONNULL_BEGIN
  @return The object for the specified section, or `nil` if the section does not exist.
  在数据中查找section 位置的object 没找到返回nil
  */
-- (id)objectAtSection:(NSInteger)section;
+- (id)objectAtSection:(NSUInteger)section;
 
 /**
  Returns the section corresponding to the specified object in the list. Constant time lookup.
  @return The section index of `object` if found, otherwise `NSNotFound`.
  返回object 所在的位置 没找到返回 NSNotFound
  */
-- (NSInteger)sectionForObject:(id)item;
+- (NSUInteger)sectionForObject:(id)item;
 
 /**
  Returns a copy of all the objects currently driving the adapter.

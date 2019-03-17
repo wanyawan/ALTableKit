@@ -13,19 +13,29 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ALTableSectionController (PrivateMethods)
 
-- (void)al_beforeUpdateToObject:(id)object;
+- (void)al_beforeUpdateToObject:(nullable id)object;
 
 - (void)al_didUpdateToObject:(id)object;
 
-- (NSInteger)al_numberOfRows;
+- (NSUInteger)al_numberOfRows;
 
-- (CGFloat)al_heightForRowAtIndex:(NSInteger)index;
+- (CGFloat)al_heightForRowAtIndex:(NSUInteger)index;
 
-- (__kindof UITableViewCell *)al_cellForRowAtIndex:(NSInteger)index;
+- (__kindof UITableViewCell *)al_cellForRowAtIndex:(NSUInteger)index;
 
-- (void)al_didSelectRowAtIndex:(NSInteger)index;
+- (void)al_didSelectRowAtIndex:(NSUInteger)index;
 
-- (void)al_didDeselectRowAtIndex:(NSInteger)index;
+- (void)al_didDeselectRowAtIndex:(NSUInteger)index;
+
+- (BOOL)al_canEditRowAtIndex:(NSUInteger)index;
+
+- (UITableViewCellEditingStyle)al_editingStyleForRowAtIndex:(NSUInteger)index;
+
+- (nullable NSString *)al_titleForDeleteConfirmationButtonForRowAtIndex:(NSUInteger)index;
+
+- (void)al_commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndex:(NSUInteger)index;
+
+- (nullable NSArray<UITableViewRowAction *> *)al_editActionsForRowAtIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_0);
 
 @end
 

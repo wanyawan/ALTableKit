@@ -9,7 +9,7 @@
 #import <ALTableKit/ALTableAssert.h>
 #import "ALTableSectionProviderInternal.h"
 #import "ALTableSectionController+PrivateMethods.h"
-#import "ALTableAdapterInternal.h"
+#import "ALTablePrivateContext.h"
 
 @implementation ALTableSectionProvider
 
@@ -60,7 +60,8 @@
     }];
     [self.sectionController al_beforeUpdateToObject:object];
     [self.sectionController al_didUpdateToObject:object];
-    [self.tableContext insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
+    id <ALTablePrivateContext> privateContext = self.tableContext;
+    [privateContext insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 
 - (void)deleteRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
@@ -73,7 +74,8 @@
     }];
     [self.sectionController al_beforeUpdateToObject:object];
     [self.sectionController al_didUpdateToObject:object];
-    [self.tableContext deleteRowsAtIndexPaths:indexPaths withRowAnimation:animation];
+    id <ALTablePrivateContext> privateContext = self.tableContext;
+    [privateContext deleteRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 
 - (void)reloadRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
@@ -86,7 +88,8 @@
     }];
     [self.sectionController al_beforeUpdateToObject:object];
     [self.sectionController al_didUpdateToObject:object];
-    [self.tableContext reloadRowsAtIndexPaths:indexPaths withRowAnimation:animation];
+    id <ALTablePrivateContext> privateContext = self.tableContext;
+    [privateContext reloadRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 
 @end

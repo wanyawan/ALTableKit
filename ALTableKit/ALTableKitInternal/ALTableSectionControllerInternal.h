@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "ALTableSectionController.h"
-#import "ALTablePrivateContext.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak, nullable, readwrite) UIViewController *viewController;
 
-@property (nonatomic, weak, nullable, readwrite) id<ALTablePrivateContext> tableContext;
+@property (nonatomic, weak, nullable, readwrite) id<ALTableContext> tableContext;
 
 @property (nonatomic, strong, nullable, readwrite) NSMapTable <NSNumber *,NSNumber *> *cellHeightMap;
 

@@ -104,16 +104,8 @@ static inline NSString *ALTableReusableViewIdentifier(Class viewClass, NSString 
     return [self dequeueReusableHeaderFooterViewWithNibName:nibName reuseIdentifier:nil bundle:bundle forSectionController:sectionController];
 }
 
-- (void)insertRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation {
-    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
-}
-
-- (void)deleteRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation {
-    [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:animation];
-}
-
-- (void)reloadRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation {
-    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:animation];
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [self.tableView setEditing:editing animated:animated];
 }
 
 @end

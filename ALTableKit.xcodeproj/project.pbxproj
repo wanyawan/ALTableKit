@@ -11,6 +11,7 @@
 		FA16920121CC965000DFF00B /* ALTableComplexSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1691FF21CC965000DFF00B /* ALTableComplexSectionController.m */; };
 		FA16920421CC965C00DFF00B /* ALTableSectionProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = FA16920221CC965C00DFF00B /* ALTableSectionProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA16920521CC965C00DFF00B /* ALTableSectionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16920321CC965C00DFF00B /* ALTableSectionProvider.m */; };
+		FA77B391223F7CFA006958AB /* ALTablePrivateContext.h in Headers */ = {isa = PBXBuildFile; fileRef = FA77B38F223F7CFA006958AB /* ALTablePrivateContext.h */; };
 		FABA848221D08ECB00FAA314 /* ALTableKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FABA848121D08ECB00FAA314 /* ALTableKitTests.m */; };
 		FABA848421D08ECB00FAA314 /* ALTableKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACFC24821CA86EF003E35C7 /* ALTableKit.framework */; };
 		FABC9AEA223BDE0C0046C168 /* ALTableSectionEdit.h in Headers */ = {isa = PBXBuildFile; fileRef = FABC9AE8223BDE0C0046C168 /* ALTableSectionEdit.h */; };
@@ -71,6 +72,7 @@
 		FA1691FF21CC965000DFF00B /* ALTableComplexSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALTableComplexSectionController.m; sourceTree = "<group>"; };
 		FA16920221CC965C00DFF00B /* ALTableSectionProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALTableSectionProvider.h; sourceTree = "<group>"; };
 		FA16920321CC965C00DFF00B /* ALTableSectionProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALTableSectionProvider.m; sourceTree = "<group>"; };
+		FA77B38F223F7CFA006958AB /* ALTablePrivateContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALTablePrivateContext.h; sourceTree = "<group>"; };
 		FABA847F21D08ECB00FAA314 /* ALTableKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALTableKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABA848121D08ECB00FAA314 /* ALTableKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALTableKitTests.m; sourceTree = "<group>"; };
 		FABA848321D08ECB00FAA314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		FACFC26D21CA87A8003E35C7 /* ALTableKitInternal */ = {
 			isa = PBXGroup;
 			children = (
+				FA77B38F223F7CFA006958AB /* ALTablePrivateContext.h */,
 				FACFC26E21CA87A8003E35C7 /* ALTableSectionControllerInternal.h */,
 				FAD65E5D21CC9E88003B6951 /* ALTableComplexSectionControllerInternal.h */,
 				FAD3CACC21CD507500119921 /* ALTableSectionProviderInternal.h */,
@@ -268,6 +271,7 @@
 				FAD65E5F21CC9E88003B6951 /* ALTableComplexSectionControllerInternal.h in Headers */,
 				FACFC27021CA87A8003E35C7 /* ALTableAdapter+HeightCache.h in Headers */,
 				FAD65E6721CCD95C003B6951 /* ALTableComplexSectionController+PrivateMethods.h in Headers */,
+				FA77B391223F7CFA006958AB /* ALTablePrivateContext.h in Headers */,
 				FACFC28821CA87A8003E35C7 /* ALTableAdapterProxy.h in Headers */,
 				FACFC27921CA87A8003E35C7 /* ALTableSectionMap.h in Headers */,
 				FACFC27F21CA87A8003E35C7 /* ALTableAdapter+UITableView.h in Headers */,

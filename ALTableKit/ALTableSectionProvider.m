@@ -9,6 +9,7 @@
 #import <ALTableKit/ALTableAssert.h>
 #import "ALTableSectionProviderInternal.h"
 #import "ALTableSectionController+PrivateMethods.h"
+#import "ALTableAdapterInternal.h"
 
 @implementation ALTableSectionProvider
 
@@ -49,7 +50,7 @@
     return nil;
 }
 
-- (void)updateToObject:(id)object insertRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation {
+- (void)insertRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
     NSUInteger section = self.sectionController.section;
     NSMutableArray <NSIndexPath *> *indexPaths = [NSMutableArray arrayWithCapacity:indexs.count];
     [indexs enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
@@ -62,7 +63,7 @@
     [self.tableContext insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 
-- (void)updateToObject:(id)object deleteRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation {
+- (void)deleteRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
     NSUInteger section = self.sectionController.section;
     NSMutableArray <NSIndexPath *> *indexPaths = [NSMutableArray arrayWithCapacity:indexs.count];
     [indexs enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
@@ -75,7 +76,7 @@
     [self.tableContext deleteRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 
-- (void)updateToObject:(id)object reloadRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation {
+- (void)reloadRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
     NSUInteger section = self.sectionController.section;
     NSMutableArray <NSIndexPath *> *indexPaths = [NSMutableArray arrayWithCapacity:indexs.count];
     [indexs enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {

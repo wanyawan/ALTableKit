@@ -123,8 +123,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didDeselectRowAtIndex:(NSUInteger)index;
 
 - (BOOL)canEditRowAtIndex:(NSUInteger)index;
+
 - (UITableViewCellEditingStyle)editingStyleForRowAtIndex:(NSUInteger)index;
+
 - (nullable NSString *)titleForDeleteConfirmationButtonForRowAtIndex:(NSUInteger)index;
+
 - (void)commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndex:(NSUInteger)index;
 
 - (nullable NSArray<UITableViewRowAction *> *)editActionsForRowAtIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_0);

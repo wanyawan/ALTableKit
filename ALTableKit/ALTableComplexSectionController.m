@@ -37,4 +37,13 @@
     [_indexMap updateIndexMapWithSectionProviders:sectionProviders];
 }
 
+/*
+ * ALTableComplexSectionController edit rows    ALTableSectionProvider
+ */
+- (void)insertRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {}
+
+- (void)deleteRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {}
+
+- (void)reloadRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {}
+
 @end

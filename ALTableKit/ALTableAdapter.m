@@ -13,6 +13,7 @@
 #import "ALTableAdapterProxy.h"
 #import "ALTableDisplayHandler.h"
 #import "ALTableSectionController+PrivateMethods.h"
+#import "ALTablePrivateContext.h"
 
 static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffable>> *objects) {
     if (objects == nil) {
@@ -315,6 +316,19 @@ static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffabl
         _tableView.backgroundView = backgroundView;
     }
     _tableView.backgroundView.hidden = shouldHide;
+}
+
+#pragma mark - ALTablePrivateContext
+- (void)insertRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation {
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
+}
+
+- (void)deleteRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation {
+    [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:animation];
+}
+
+- (void)reloadRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation {
+    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 
 @end

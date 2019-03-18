@@ -9,6 +9,7 @@
 #import <ALTableKit/ALTableAssert.h>
 #import "ALTableSectionControllerInternal.h"
 #import "ALTableSectionController+PrivateMethods.h"
+#import "ALTableAdapterInternal.h"
 
 @implementation ALTableSectionController
 
@@ -71,8 +72,8 @@
 - (nullable NSArray<UITableViewRowAction *> *)editActionsForRowAtIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_0) {
     return nil;
 }
-//ALTableSectionController+ALTableSectionEdit
-- (void)updateToObject:(id)object insertRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation {
+
+- (void)insertRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
     NSUInteger section = self.section;
     NSMutableArray <NSIndexPath *> *indexPaths = [NSMutableArray arrayWithCapacity:indexs.count];
     [indexs enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
@@ -84,7 +85,7 @@
     [self.tableContext insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 
-- (void)updateToObject:(id)object deleteRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation {
+- (void)deleteRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
     NSUInteger section = self.section;
     NSMutableArray <NSIndexPath *> *indexPaths = [NSMutableArray arrayWithCapacity:indexs.count];
     [indexs enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
@@ -96,7 +97,7 @@
     [self.tableContext deleteRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 
-- (void)updateToObject:(id)object reloadRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation {
+- (void)reloadRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
     NSUInteger section = self.section;
     NSMutableArray <NSIndexPath *> *indexPaths = [NSMutableArray arrayWithCapacity:indexs.count];
     [indexs enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {

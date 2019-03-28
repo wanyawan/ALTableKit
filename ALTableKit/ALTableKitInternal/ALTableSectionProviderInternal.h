@@ -13,11 +13,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ALTableSectionProvider ()
 
+@property (nonatomic, assign, readwrite) NSUInteger sectionProviderIndex;
+
+@property (nonatomic, assign, readwrite) NSUInteger firstCellAbsoluteIndex;
+
 @property (nonatomic, weak, nullable, readwrite) UIViewController *viewController;
 
 @property (nonatomic, weak, nullable, readwrite) id<ALTableContext> tableContext;
 
-@property (nonatomic, weak, nullable, readwrite) ALTableSectionController *sectionController;
+@property (nonatomic, weak, nullable, readwrite) ALTableComplexSectionController *sectionController;
 
 @end
 

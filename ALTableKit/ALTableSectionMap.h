@@ -40,13 +40,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (nullable ALTableSectionController *)sectionControllerForObject:(id)object;
 
-- (nullable ALTableSectionController *)sectionControllerForSection:(NSInteger)section;
+- (nullable ALTableSectionController *)sectionControllerForSection:(NSUInteger)section;
 
 - (NSInteger)sectionForSectionController:(id)sectionController;
 
 - (NSInteger)sectionForObject:(id)object;
 
-- (nullable id)objectForSection:(NSInteger)section;
+- (nullable id)objectForSection:(NSUInteger)section;
 
 @end
 

@@ -33,13 +33,13 @@ NS_ASSUME_NONNULL_BEGIN
  Calculate the section provier index with cell absolute index.
  通过绝对位置计算在section provier的位置
  */
-- (NSInteger)sectionProviderAbsoluteIndexWithAbsoluteIndex:(NSInteger)index;
+- (NSUInteger)sectionProviderAbsoluteIndexWithAbsoluteIndex:(NSUInteger)index;
 
 /**
  Calculate the cell relative index with cell absolute index.
  通过绝对位置计算在section provier中的相对位置
  */
-- (NSInteger)sectionProviderRelativeIndexWithAbsoluteIndex:(NSInteger)index;
+- (NSUInteger)sectionProviderRelativeIndexWithAbsoluteIndex:(NSUInteger)index;
 
 @end
 

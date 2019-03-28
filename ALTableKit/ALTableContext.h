@@ -57,6 +57,10 @@ NS_ASSUME_NONNULL_BEGIN
                                                                               bundle:(nullable NSBundle *)bundle
                                                                 forSectionController:(ALTableSectionController *)sectionController;
 
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated;
+
+// TO DO
+// - insertSections ...
 
 @end
 

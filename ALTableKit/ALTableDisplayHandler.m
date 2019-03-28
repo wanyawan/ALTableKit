@@ -69,7 +69,7 @@
         return;
     }
     
-    const NSInteger section = indexPath.section;
+    const NSUInteger section = indexPath.section;
     
     NSCountedSet *visibleSections = self.visibleTableSections;
     [visibleSections removeObject:sectionController];

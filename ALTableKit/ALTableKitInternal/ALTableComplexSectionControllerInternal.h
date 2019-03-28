@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ALTableComplexSectionController ()
 
+@property (nonatomic, strong, nullable, readwrite) NSNumber *totalOfRows;
+
 @property (nonatomic, strong, readwrite) ALTableComplexSectionControllerIndexMap *indexMap;
 
 @property (nonatomic, strong, readwrite) NSArray <ALTableSectionProvider *> *sectionProviders;

@@ -37,4 +37,14 @@
     [_indexMap updateIndexMapWithSectionProviders:sectionProviders];
 }
 
+/**
+ * ALTableComplexSectionController isn’t Implementing these method. Use ALTableSectionProvider to edit cells.
+ * ALTableComplexSectionController编辑cell 在ALTableSectionProvider中编辑
+ */
+- (void)insertRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {}
+
+- (void)deleteRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {}
+
+- (void)reloadRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {}
+
 @end

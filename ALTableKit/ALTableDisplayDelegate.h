@@ -25,11 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)tableAdapter:(ALTableAdapter *)tableAdapter willDisplaySectionController:(ALTableSectionController *)sectionController
                 cell:(UITableViewCell *)cell
-             atIndex:(NSInteger)index;
+             atIndex:(NSUInteger)index;
 
 - (void)tableAdapter:(ALTableAdapter *)tableAdapter didEndDisplayingSectionController:(ALTableSectionController *)sectionController
                 cell:(UITableViewCell *)cell
-             atIndex:(NSInteger)index;
+             atIndex:(NSUInteger)index;
 
 @end
 

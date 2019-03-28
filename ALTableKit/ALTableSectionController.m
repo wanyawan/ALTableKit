@@ -73,6 +73,10 @@
     return nil;
 }
 
+/**
+ * Section controller insert rows.Don't overwrite this method.
+ * 插入行 直接使用不要重写这个方法
+ */
 - (void)insertRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
     NSUInteger section = self.section;
     NSMutableArray <NSIndexPath *> *indexPaths = [NSMutableArray arrayWithCapacity:indexs.count];
@@ -82,10 +86,14 @@
     }];
     [self al_beforeUpdateToObject:object];
     [self al_didUpdateToObject:object];
-    id <ALTablePrivateContext> privateContext = self.tableContext;
+    id <ALTablePrivateContext> privateContext = (id <ALTablePrivateContext>)self.tableContext;
     [privateContext insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 
+/**
+ * Section controller delete rows.Don't overwrite this method.
+ * 删除行 直接使用不要重写这个方法
+ */
 - (void)deleteRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
     NSUInteger section = self.section;
     NSMutableArray <NSIndexPath *> *indexPaths = [NSMutableArray arrayWithCapacity:indexs.count];
@@ -95,10 +103,14 @@
     }];
     [self al_beforeUpdateToObject:object];
     [self al_didUpdateToObject:object];
-    id <ALTablePrivateContext> privateContext = self.tableContext;
+    id <ALTablePrivateContext> privateContext = (id <ALTablePrivateContext>)self.tableContext;
     [privateContext deleteRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 
+/**
+ * Section controller reload rows.Don't overwrite this method.
+ * 刷新行 直接使用不要重写这个方法
+ */
 - (void)reloadRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
     NSUInteger section = self.section;
     NSMutableArray <NSIndexPath *> *indexPaths = [NSMutableArray arrayWithCapacity:indexs.count];
@@ -108,7 +120,7 @@
     }];
     [self al_beforeUpdateToObject:object];
     [self al_didUpdateToObject:object];
-    id <ALTablePrivateContext> privateContext = self.tableContext;
+    id <ALTablePrivateContext> privateContext = (id <ALTablePrivateContext>)self.tableContext;
     [privateContext reloadRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 

@@ -3,7 +3,7 @@
 A data-driven UITableView framework for building fast and Low coupling, Similar to the IGList CollectionView framework.
 数据驱动的UITableView框架，用于构建快速低耦合的tableview，类似IGList CollectionView框架。
 
-IGList用了一段时间了确实比较好用，但是发现把tableview 全部替换成collectionview成本很高而且有些情况collectionview并不能完全替代collectionview，所以写了这个ALTableKit。
+IGList用了一段时间了确实比较好用，但是发现把tableview 全部替换成collectionview成本很高而且有些情况collectionview并不能完全替代tableview，所以写了这个ALTableKit。
 
 ## Features
 
@@ -12,6 +12,7 @@ IGList用了一段时间了确实比较好用，但是发现把tableview 全部�
 * 自动根据cell 和identifier 注册cell，通过context直接重用（再也不怕忘记注册cell闪退）
 * 把TableView delegate datasource分发到不同的Section Controller 降低代码耦合
 * 通过section controller 可以自动缓存table view cell 高度
+* 通过section controller 可以编辑当前section中的 cell (insert delete reload)
 * 方便每一个section controller 进行单元测试
 * 可以将复杂的Complex Section Controller拆分成多个Section Provider 降低耦合 简化逻辑
 
@@ -45,12 +46,12 @@ IGList用了一段时间了确实比较好用，但是发现把tableview 全部�
 ```
 # use_frameworks! is needed for swift projects
 use_frameworks!
-pod 'ALTableKit', '~>1.1.3'
+pod 'ALTableKit', '~>1.1.4'
 ```
 
 ### Carthage
 ```
-github "wanyawan/ALTableKit" ~>1.1.3
+github "wanyawan/ALTableKit" ~>1.1.4
 ```
 ## How to use
 

@@ -46,12 +46,12 @@ IGList用了一段时间了确实比较好用，但是发现把tableview 全部�
 ```
 # use_frameworks! is needed for swift projects
 use_frameworks!
-pod 'ALTableKit', '~>1.1.4'
+pod 'ALTableKit', '~>1.1.5'
 ```
 
 ### Carthage
 ```
-github "wanyawan/ALTableKit" ~>1.1.4
+github "wanyawan/ALTableKit" ~>1.1.5
 ```
 ## How to use
 

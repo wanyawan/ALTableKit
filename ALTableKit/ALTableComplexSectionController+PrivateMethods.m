@@ -23,9 +23,9 @@
 #pragma mark -- Override Methods
 
 - (void)al_beforeUpdateToObject:(id)object {
+    self.totalOfRows = nil;
     if (self.cellHeightMap) {
         [self.cellHeightMap removeAllObjects];
-        self.totalOfRows = nil;
     }
 }
 

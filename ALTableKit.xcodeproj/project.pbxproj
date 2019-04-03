@@ -14,7 +14,7 @@
 		FA77B391223F7CFA006958AB /* ALTablePrivateContext.h in Headers */ = {isa = PBXBuildFile; fileRef = FA77B38F223F7CFA006958AB /* ALTablePrivateContext.h */; };
 		FABA848221D08ECB00FAA314 /* ALTableKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FABA848121D08ECB00FAA314 /* ALTableKitTests.m */; };
 		FABA848421D08ECB00FAA314 /* ALTableKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACFC24821CA86EF003E35C7 /* ALTableKit.framework */; };
-		FABC9AEA223BDE0C0046C168 /* ALTableSectionEdit.h in Headers */ = {isa = PBXBuildFile; fileRef = FABC9AE8223BDE0C0046C168 /* ALTableSectionEdit.h */; };
+		FABC9AEA223BDE0C0046C168 /* ALTableSectionEdit.h in Headers */ = {isa = PBXBuildFile; fileRef = FABC9AE8223BDE0C0046C168 /* ALTableSectionEdit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FACFC27021CA87A8003E35C7 /* ALTableAdapter+HeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = FACFC25321CA87A7003E35C7 /* ALTableAdapter+HeightCache.h */; };
 		FACFC27121CA87A8003E35C7 /* ALTableKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FACFC25421CA87A7003E35C7 /* ALTableKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FACFC27221CA87A8003E35C7 /* ALTableSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACFC25521CA87A7003E35C7 /* ALTableSectionController.m */; };
@@ -251,6 +251,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABC9AEA223BDE0C0046C168 /* ALTableSectionEdit.h in Headers */,
 				FACFC27321CA87A8003E35C7 /* ALTableAdapterUpdater.h in Headers */,
 				FACFC28721CA87A8003E35C7 /* ALTableContext.h in Headers */,
 				FA16920021CC965000DFF00B /* ALTableComplexSectionController.h in Headers */,
@@ -265,7 +266,6 @@
 				FACFC28621CA87A8003E35C7 /* ALTableAdapter.h in Headers */,
 				FACFC27121CA87A8003E35C7 /* ALTableKit.h in Headers */,
 				FACFC27621CA87A8003E35C7 /* ALTableAdapter+ALTableContext.h in Headers */,
-				FABC9AEA223BDE0C0046C168 /* ALTableSectionEdit.h in Headers */,
 				FACFC28B21CA87A8003E35C7 /* ALTableAdapterInternal.h in Headers */,
 				FAD65E6321CCD15E003B6951 /* ALTableComplexSectionControllerIndexMap.h in Headers */,
 				FAD65E5F21CC9E88003B6951 /* ALTableComplexSectionControllerInternal.h in Headers */,

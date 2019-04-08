@@ -12,10 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ALTableHeaderFooterViewSource <NSObject>
 
-@property (nonatomic, strong, nullable, readwrite) NSNumber *sectionHeaderViewHeight;
-
-@property (nonatomic, strong, nullable, readwrite) NSNumber *sectionFooterViewHeight;
-
 - (CGFloat)heightForSectionHeaderView;
 
 - (CGFloat)heightForSectionFooterView;

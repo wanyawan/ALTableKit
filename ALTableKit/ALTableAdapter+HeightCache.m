@@ -28,11 +28,11 @@
 - (CGFloat)heightForHeaderViewAtIndexPath:(NSIndexPath *)indexPath {
     ALTableSectionController *section = [self sectionControllerForSection:indexPath.section];
     if (section.headerFooterViewSource) {
-        if (section.headerFooterViewSource.sectionHeaderViewHeight) {
-            return section.headerFooterViewSource.sectionHeaderViewHeight.floatValue;
+        if (section.sectionHeaderViewHeight) {
+            return section.sectionHeaderViewHeight.floatValue;
         }else {
             CGFloat headerViewHeight = [section.headerFooterViewSource heightForSectionHeaderView];
-            section.headerFooterViewSource.sectionHeaderViewHeight = [NSNumber numberWithFloat:headerViewHeight];
+            section.sectionHeaderViewHeight = [NSNumber numberWithFloat:headerViewHeight];
             return headerViewHeight;
         }
     }
@@ -42,11 +42,11 @@
 - (CGFloat)heightForFooterViewAtIndexPath:(NSIndexPath *)indexPath {
     ALTableSectionController *section = [self sectionControllerForSection:indexPath.section];
     if (section.headerFooterViewSource) {
-        if (section.headerFooterViewSource.sectionFooterViewHeight) {
-            return section.headerFooterViewSource.sectionFooterViewHeight.floatValue;
+        if (section.sectionFooterViewHeight) {
+            return section.sectionFooterViewHeight.floatValue;
         }else {
             CGFloat footerViewHeight = [section.headerFooterViewSource heightForSectionFooterView];
-            section.headerFooterViewSource.sectionFooterViewHeight = [NSNumber numberWithFloat:footerViewHeight];
+            section.sectionFooterViewHeight = [NSNumber numberWithFloat:footerViewHeight];
             return footerViewHeight;
         }
     }

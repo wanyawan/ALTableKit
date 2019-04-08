@@ -50,9 +50,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, nullable, weak) id <ALTableDelegate> delegate;
 
 /**
- The object that receives `UITableViewDelegate` events.
+ The object that receives `UITableViewDelegate` events, except events about heightforcell, headerfooterview and heightforheaderfooterview.
  @note This object *will not* receive `UIScrollViewDelegate` events. Instead use scrollViewDelegate.
- 接收UITableViewDelegate事件的对象（不能接收到UIScrollViewDelegate的事件）
+ 接收UITableViewDelegate事件的对象 不包含返回headerfooterview、headerfooterview高度、cell高度的方法（不能接收到UIScrollViewDelegate的事件）
  */
 @property (nonatomic, nullable, weak) id <UITableViewDelegate> tableViewDelegate;
 

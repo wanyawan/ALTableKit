@@ -84,11 +84,8 @@ static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffabl
         _registeredHeaderFooterViewIdentifiers = [NSMutableSet new];
         _registeredHeaderFooterViewNibNames = [NSMutableSet new];
         _tableView = tableView;
-        _tableView.estimatedRowHeight = (tableView.estimatedRowHeight == UITableViewAutomaticDimension) ? 0 : tableView.estimatedRowHeight;
-        _tableView.estimatedSectionHeaderHeight = (tableView.estimatedSectionHeaderHeight == UITableViewAutomaticDimension) ? 0 : tableView.estimatedSectionHeaderHeight;
-        _tableView.estimatedSectionFooterHeight = (tableView.estimatedSectionFooterHeight == UITableViewAutomaticDimension) ? 0 : tableView.estimatedSectionFooterHeight;
         _tableView.dataSource = self;
-
+        
         [self _updateTableViewDelegate];
         [self _updateAfterPublicSettingsChange];
     }

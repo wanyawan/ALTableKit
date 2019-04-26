@@ -133,7 +133,7 @@
 - (void)updateHeightForRowsAtIndexs:(NSIndexSet *)indexs {
     ALAssertMainThread();
     ALParameterAssert(indexs != nil);
-    if (self.sectionController.needCacheCellsHeight) {
+    if (self.needCacheCellsHeight) {
         [indexs enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
             [self.cellHeightMap removeObjectForKey:@(idx)];
         }];
@@ -144,7 +144,7 @@
 
 - (void)updateRowsWithUpdates:(dispatch_block_t)updates {
     ALAssertMainThread();
-    ALParameterAssert(indexs != nil);
+    ALParameterAssert(updates != nil);
     id <ALTablePrivateContext> privateContext = (id <ALTablePrivateContext>)self.tableContext;
     [privateContext updateRowsWithUpdates:updates];
 }

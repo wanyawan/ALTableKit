@@ -126,7 +126,7 @@
 
 - (void)updateRowsWithUpdates:(dispatch_block_t)updates {
     ALAssertMainThread();
-    ALParameterAssert(indexs != nil);
+    ALParameterAssert(updates != nil);
     id <ALTablePrivateContext> privateContext = (id <ALTablePrivateContext>)self.tableContext;
     [privateContext updateRowsWithUpdates:updates];
 }

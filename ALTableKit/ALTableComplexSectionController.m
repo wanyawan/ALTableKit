@@ -47,4 +47,8 @@
 
 - (void)reloadRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {}
 
+- (void)updateHeightForRowsAtIndexs:(NSIndexSet *)indexs {}
+
+- (void)updateRowsWithUpdates:(dispatch_block_t)updates {}
+
 @end

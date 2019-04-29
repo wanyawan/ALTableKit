@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)reloadRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation;
 
+- (void)updateHeightForRows;
+
+- (void)updateRowsWithUpdates:(dispatch_block_t)updates;
+
 @end
 
 NS_ASSUME_NONNULL_END

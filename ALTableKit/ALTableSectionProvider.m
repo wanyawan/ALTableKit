@@ -10,6 +10,7 @@
 #import "ALTableSectionProviderInternal.h"
 #import "ALTableSectionController+PrivateMethods.h"
 #import "ALTablePrivateContext.h"
+#import "ALTableSectionControllerInternal.h"
 
 @implementation ALTableSectionProvider
 
@@ -55,6 +56,8 @@
  * 插入行直接使用不要重写这个方法
  */
 - (void)insertRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
+    ALAssertMainThread();
+    ALParameterAssert(indexs != nil);
     NSUInteger section = self.sectionController.section;
     NSMutableArray <NSIndexPath *> *indexPaths = [NSMutableArray arrayWithCapacity:indexs.count];
     [indexs enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
@@ -73,6 +76,8 @@
  * 删除行 直接使用不要重写这个方法
  */
 - (void)deleteRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
+    ALAssertMainThread();
+    ALParameterAssert(indexs != nil);
     NSUInteger section = self.sectionController.section;
     NSMutableArray <NSIndexPath *> *indexPaths = [NSMutableArray arrayWithCapacity:indexs.count];
     [indexs enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
@@ -91,6 +96,8 @@
  * 刷新行 直接使用不要重写这个方法
  */
 - (void)reloadRowsAtIndexs:(NSIndexSet *)indexs withRowAnimation:(UITableViewRowAnimation)animation updateToObject:(id)object {
+    ALAssertMainThread();
+    ALParameterAssert(indexs != nil);
     NSUInteger section = self.sectionController.section;
     NSMutableArray <NSIndexPath *> *indexPaths = [NSMutableArray arrayWithCapacity:indexs.count];
     [indexs enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
@@ -102,6 +109,26 @@
     [self.sectionController al_didUpdateToObject:object];
     id <ALTablePrivateContext> privateContext = (id <ALTablePrivateContext>)self.tableContext;
     [privateContext reloadRowsAtIndexPaths:indexPaths withRowAnimation:animation];
+}
+
+- (void)updateHeightForRowsAtIndexs:(NSIndexSet *)indexs {
+    ALAssertMainThread();
+    ALParameterAssert(indexs != nil);
+    if (self.sectionController.needCacheCellsHeight) {
+        [indexs enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
+            NSUInteger row = self.firstCellAbsoluteIndex + idx;
+            [self.sectionController.cellHeightMap removeObjectForKey:@(row)];
+        }];
+    }
+    id <ALTablePrivateContext> privateContext = (id <ALTablePrivateContext>)self.tableContext;
+    [privateContext updateHeightForRows];
+}
+
+- (void)updateRowsWithUpdates:(dispatch_block_t)updates {
+    ALAssertMainThread();
+    ALParameterAssert(updates != nil);
+    id <ALTablePrivateContext> privateContext = (id <ALTablePrivateContext>)self.tableContext;
+    [privateContext updateRowsWithUpdates:updates];
 }
 
 @end

@@ -331,4 +331,15 @@ static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffabl
     [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 
+- (void)updateHeightForRows {
+    [self.tableView beginUpdates];
+    [self.tableView endUpdates];
+}
+
+- (void)updateRowsWithUpdates:(dispatch_block_t)updates {
+    [self.tableView beginUpdates];
+    updates();
+    [self.tableView endUpdates];
+}
+
 @end

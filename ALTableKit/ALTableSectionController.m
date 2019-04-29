@@ -32,6 +32,12 @@
     }
 }
 
+- (void)setHeaderFooterViewSource:(id<ALTableHeaderFooterViewSource>)headerFooterViewSource {
+    _headerFooterViewSource = headerFooterViewSource;
+    self.sectionHeaderViewHeight = nil;
+    self.sectionFooterViewHeight = nil;
+}
+
 #pragma mark -- Public Methods
 
 - (void)didUpdateToObject:(id)object {}

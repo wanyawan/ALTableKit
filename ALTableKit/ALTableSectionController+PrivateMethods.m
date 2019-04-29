@@ -12,6 +12,8 @@
 @implementation ALTableSectionController (PrivateMethods)
 
 - (void)al_beforeUpdateToObject:(nullable id)object {
+    self.sectionHeaderViewHeight = nil;
+    self.sectionFooterViewHeight = nil;
     if (self.cellHeightMap) {
         [self.cellHeightMap removeAllObjects];
     }

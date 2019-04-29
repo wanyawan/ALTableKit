@@ -25,6 +25,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, readwrite) BOOL isLastSection;
 
+@property (nonatomic, strong, nullable, readwrite) NSNumber *sectionHeaderViewHeight;
+
+@property (nonatomic, strong, nullable, readwrite) NSNumber *sectionFooterViewHeight;
+
 @end
 
 NS_ASSUME_NONNULL_END

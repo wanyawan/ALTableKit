@@ -17,6 +17,11 @@ static BOOL isInterceptedSelector(SEL sel) {
             sel == @selector(scrollViewDidEndDragging:willDecelerate:) ||
             sel == @selector(scrollViewDidEndDecelerating:) ||
             // UITableViewDelegate
+            sel == @selector(tableView:heightForRowAtIndexPath:) ||
+            sel == @selector(tableView:heightForHeaderInSection:) ||
+            sel == @selector(tableView:viewForHeaderInSection:) ||
+            sel == @selector(tableView:heightForFooterInSection:) ||
+            sel == @selector(tableView:viewForFooterInSection:) ||
             sel == @selector(tableView:didSelectRowAtIndexPath:) ||
             sel == @selector(tableView:didDeselectRowAtIndexPath:) ||
             sel == @selector(tableView:willDisplayCell:forRowAtIndexPath:) ||
@@ -41,7 +46,7 @@ static BOOL isInterceptedSelector(SEL sel) {
 - (instancetype)initWithTableViewDelegateTarget:(nullable id<UITableViewDelegate>)tableViewDelegateTarget
                        scrollViewDelegateTarget:(nullable id<UIScrollViewDelegate>)scrollViewDelegateTarget
                                     interceptor:(ALTableAdapter *)interceptor {
-    ALParameterAssert(interceptor == nil);
+    ALParameterAssert(interceptor != nil);
     if (self) {
         _tableViewDelegateTarget = tableViewDelegateTarget;
         _scrollViewDelegateTarget = scrollViewDelegateTarget;

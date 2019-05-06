@@ -217,8 +217,8 @@ static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffabl
     __weak __typeof__(self) weakSelf = self;
     [self.updater reloadDataWithTableView:tableView reloadUpdateBlock:^{
         // purge all section controllers from the item map so that they are regenerated
-        [weakSelf.sectionMap reset];
-        [weakSelf _updateObjects:uniqueObjects dataSource:dataSource];
+//        [weakSelf.sectionMap reset];
+        [weakSelf _reloadObjects:uniqueObjects dataSource:dataSource];
     } completion:^(BOOL finished) {
         if (completion) {
             completion(finished);
@@ -253,9 +253,61 @@ static NSArray *objectsWithDuplicateIdentifiersRemoved(NSArray<id<ALTableDiffabl
 }
 
 #pragma mark - Private API
+// these method is what updates the "source of truth"
+// these should only be called just before the table view is updated
 
-// this method is what updates the "source of truth"
-// this should only be called just before the table view is updated
+- (void)_reloadObjects:(NSArray *)objects dataSource:(id<ALTableDataSource>)dataSource {
+    NSMutableArray<ALTableSectionController *> *sectionControllers = [NSMutableArray new];
+    NSMutableArray *validObjects = [NSMutableArray new];
+    
+    ALTableSectionMap *map = [ALTableSectionMap new];
+    
+    NSMutableSet *updatedObjects = [NSMutableSet new];
+    
+    for (id object in objects) {
+        ALTableSectionController *sectionController = [map sectionControllerForObject:object];
+        if (sectionController == nil) {
+            sectionController = [dataSource tableAdapter:self sectionControllerForObject:object];
+        }
+        
+        if (sectionController == nil) {
+            NSLog(@"WARNING: Ignoring nil section controller returned by data source %@ for object %@.",dataSource, object);
+            continue;
+        }
+        
+        sectionController.tableContext = self;
+        sectionController.viewController = self.viewController;
+        
+        // check if the item has changed instances or is new
+        const NSUInteger oldSection = [map sectionForObject:object];
+        if (oldSection == NSNotFound || [map objectForSection:oldSection] != object) {
+            [updatedObjects addObject:object];
+        }
+        
+        [sectionControllers addObject:sectionController];
+        [validObjects addObject:object];
+    }
+    
+#if DEBUG
+    ALAssert([NSSet setWithArray:sectionControllers].count == sectionControllers.count,
+             @"Section controllers array is not filled with unique objects; section controllers are being reused");
+#endif
+    
+    [map updateWithObjects:validObjects sectionControllers:sectionControllers];
+    // now that the maps have been created and contexts are assigned, we consider the section controller "fully loaded"
+    for (id object in updatedObjects) {
+        ALTableSectionController *sectionController= [map sectionControllerForObject:object];
+        [sectionController al_beforeUpdateToObject:object];
+        [sectionController al_didUpdateToObject:object];
+    }
+    NSUInteger itemCount = 0;
+    for (ALTableSectionController *sectionController in sectionControllers) {
+        itemCount += [sectionController al_numberOfRows];
+    }
+    [self _updateBackgroundViewShouldHide:itemCount > 0];
+    _sectionMap = map;
+}
+
 - (void)_updateObjects:(NSArray *)objects dataSource:(id<ALTableDataSource>)dataSource {
     NSMutableArray<ALTableSectionController *> *sectionControllers = [NSMutableArray new];
     NSMutableArray *validObjects = [NSMutableArray new];

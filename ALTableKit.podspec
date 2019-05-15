@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ALTableKit'
-  s.version = '1.1.5'
+  s.version = '1.1.6'
   s.summary = 'A data-driven UITableView framework.'
   s.homepage = 'https://github.com/wanyawan/ALTableKit'
   # s.documentation_url = 'https://github.com/wanyawan/ALTableKit'

@@ -44,9 +44,12 @@
                        indexPath:(NSIndexPath *)indexPath {
     ALParameterAssert(view != nil);
     ALParameterAssert(tableAdapter != nil);
-    ALParameterAssert(object != nil);
     ALParameterAssert(indexPath != nil);
-
+    
+    if (object == nil || sectionController == nil) {
+        return;
+    }
+    
     [self.visibleViewObjectMap setObject:object forKey:view];
     NSCountedSet *visibleListSections = self.visibleTableSections;
     if ([visibleListSections countForObject:sectionController] == 0) {

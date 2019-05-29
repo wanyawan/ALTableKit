@@ -13,7 +13,7 @@
 
 @implementation ALTableAdapter (HeightCache)
 
-- (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)al_heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     ALTableSectionController *section = [self sectionControllerForSection:indexPath.section];
     NSNumber *height = [section.cellHeightMap objectForKey:@(indexPath.row)];
     if (height) {
@@ -25,7 +25,7 @@
     }
 }
 
-- (CGFloat)heightForHeaderViewAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)al_heightForHeaderViewAtIndexPath:(NSIndexPath *)indexPath {
     ALTableSectionController *section = [self sectionControllerForSection:indexPath.section];
     if (section.headerFooterViewSource) {
         if (section.sectionHeaderViewHeight) {
@@ -39,7 +39,7 @@
     return CGFLOAT_MIN;
 }
 
-- (CGFloat)heightForFooterViewAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)al_heightForFooterViewAtIndexPath:(NSIndexPath *)indexPath {
     ALTableSectionController *section = [self sectionControllerForSection:indexPath.section];
     if (section.headerFooterViewSource) {
         if (section.sectionFooterViewHeight) {

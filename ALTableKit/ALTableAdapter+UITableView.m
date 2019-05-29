@@ -29,7 +29,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat height = [self heightForRowAtIndexPath:indexPath];
+    CGFloat height = [self al_heightForRowAtIndexPath:indexPath];
     return height;
 }
 
@@ -42,7 +42,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSUInteger)section {
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:section];
-    CGFloat height = [self heightForHeaderViewAtIndexPath:indexPath];
+    CGFloat height = [self al_heightForHeaderViewAtIndexPath:indexPath];
     return height;
 }
 
@@ -56,7 +56,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSUInteger)section {
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:section];
-    CGFloat height = [self heightForFooterViewAtIndexPath:indexPath];
+    CGFloat height = [self al_heightForFooterViewAtIndexPath:indexPath];
     return height;
 }
 

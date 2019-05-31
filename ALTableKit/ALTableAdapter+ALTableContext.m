@@ -195,6 +195,7 @@ static inline NSString *ALTableReusableViewIdentifier(Class viewClass, NSString 
         [tableView registerNib:nib forHeaderFooterViewReuseIdentifier:identifier];
     }
     UITableViewHeaderFooterView *templateHeaderFooterView = [self al_templateHeaderFooterViewForReuseIdentifier:identifier];
+    [templateHeaderFooterView prepareForReuse];
     if (configuration) {
         configuration(templateHeaderFooterView);
     }
@@ -231,7 +232,7 @@ static inline NSString *ALTableReusableViewIdentifier(Class viewClass, NSString 
     cell.bounds = cellBounds;
     
     CGFloat rightSystemViewsWidth = 0.0;
-    for (UIView *view in self.subviews) {
+    for (UIView *view in self.tableView.subviews) {
         if ([view isKindOfClass:NSClassFromString(@"UITableViewIndex")]) {
             rightSystemViewsWidth = CGRectGetWidth(view.frame);
             break;

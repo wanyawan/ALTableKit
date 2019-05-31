@@ -170,6 +170,7 @@ static inline NSString *ALTableReusableViewIdentifier(Class viewClass, NSString 
         [tableView registerClass:viewClass forHeaderFooterViewReuseIdentifier:identifier];
     }
     UITableViewHeaderFooterView *templateHeaderFooterView = [self al_templateHeaderFooterViewForReuseIdentifier:identifier];
+    [templateHeaderFooterView prepareForReuse];
     if (configuration) {
         configuration(templateHeaderFooterView);
     }
@@ -225,8 +226,22 @@ static inline NSString *ALTableReusableViewIdentifier(Class viewClass, NSString 
 - (CGFloat)al_systemFittingHeightForConfiguratedCell:(UITableViewCell *)cell {
     CGFloat contentViewWidth = CGRectGetWidth(self.tableView.frame);
     
+    CGRect cellBounds = cell.bounds;
+    cellBounds.size.width = contentViewWidth;
+    cell.bounds = cellBounds;
+    
+    CGFloat rightSystemViewsWidth = 0.0;
+    for (UIView *view in self.subviews) {
+        if ([view isKindOfClass:NSClassFromString(@"UITableViewIndex")]) {
+            rightSystemViewsWidth = CGRectGetWidth(view.frame);
+            break;
+        }
+    }
+    
+    // If a cell has accessory view or system accessory type, its content view's width is smaller
+    // than cell's by some fixed values.
     if (cell.accessoryView) {
-        contentViewWidth -= 16 + CGRectGetWidth(cell.accessoryView.frame);
+        rightSystemViewsWidth += 16 + CGRectGetWidth(cell.accessoryView.frame);
     } else {
         static const CGFloat systemAccessoryWidths[] = {
             [UITableViewCellAccessoryNone] = 0,
@@ -235,8 +250,14 @@ static inline NSString *ALTableReusableViewIdentifier(Class viewClass, NSString 
             [UITableViewCellAccessoryCheckmark] = 40,
             [UITableViewCellAccessoryDetailButton] = 48
         };
-        contentViewWidth -= systemAccessoryWidths[cell.accessoryType];
+        rightSystemViewsWidth += systemAccessoryWidths[cell.accessoryType];
     }
+    
+    if ([UIScreen mainScreen].scale >= 3 && [UIScreen mainScreen].bounds.size.width >= 414) {
+        rightSystemViewsWidth += 4;
+    }
+    
+    contentViewWidth -= rightSystemViewsWidth;
     
     // If not using auto layout, you have to override "-sizeThatFits:" to provide a fitting size by yourself.
     // This is the same height calculation passes used in iOS8 self-sizing cell's implementation.

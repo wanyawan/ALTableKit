@@ -17,19 +17,19 @@ NS_ASSUME_NONNULL_BEGIN
  Return the cell height at indexPath.
  返回indexPath位置 HeaderView的高度
  */
-- (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)al_heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
  Return the HeaderView height at indexPath.
  返回indexPath位置 HeaderView的高度
  */
-- (CGFloat)heightForHeaderViewAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)al_heightForHeaderViewAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
  Return the cell FooterView at indexPath.
  返回indexPath位置 FooterView的高度
  */
-- (CGFloat)heightForFooterViewAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)al_heightForFooterViewAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
